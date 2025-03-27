@@ -51,7 +51,7 @@ def safe_values_column():
 
 @app.cell
 def _(pd, ref):
-    referencia = pd.read_pickle(ref)
+    referencia = pd.read_pickle(ref, compression=None)
     return (referencia,)
 
 
