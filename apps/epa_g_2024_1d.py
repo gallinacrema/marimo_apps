@@ -12,9 +12,10 @@ def _():
 
 @app.cell
 def _():
+    import pyarrow
     import pandas as pd
     import altair as alt
-    return alt, pd
+    return alt, pd, pyarrow
 
 
 @app.cell
