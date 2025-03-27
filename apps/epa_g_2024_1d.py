@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.11.28"
+__generated_with = "0.11.29"
 app = marimo.App(width="medium")
 
 
@@ -13,9 +13,10 @@ def _():
 @app.cell
 def _():
     import pyarrow
+    import numpy as np
     import pandas as pd
     import altair as alt
-    return alt, pd, pyarrow
+    return alt, np, pd, pyarrow
 
 
 @app.cell
@@ -24,10 +25,45 @@ def _(mo):
         mo.notebook_location() / "public"
     )
 
-    eo = data_path.joinpath("eo_matrix.feather")
     ref = data_path.joinpath("referencia.pkl")
-    src = data_path.joinpath("source.feather")
-    return data_path, eo, ref, src
+    epa_g_1d = data_path.joinpath("epa_galicia_2024_1d.feather")
+    return data_path, epa_g_1d, ref
+
+
+@app.cell
+def _(epa_g_1d, pd):
+    epa_1d = pd.read_feather(epa_g_1d)
+    return (epa_1d,)
+
+
+@app.cell
+def _(epa_1d, np, pd):
+    eo_matrix = (
+        pd.DataFrame(
+            np.array(
+                np.meshgrid(
+                    epa_1d.query(
+                        'AOI=="03"|AOI=="04"'
+                    ).ACT1.unique(),
+                    epa_1d.query(
+                        'AOI=="03"|AOI=="04"'
+                    ).OCUP1.unique(),
+                )
+            ).T.reshape(-1, 2),
+            columns=["ACT1", "OCUP1"],
+        )
+        .merge(
+            epa_1d.query(
+                'AOI=="03"|AOI=="04"'
+            )
+            .groupby(["ACT1", "OCUP1"], observed=True)
+            .FACTOREL.sum().div(4).astype(int)
+            .reset_index(),
+            how="left",
+        )  
+        .pivot_table(index="ACT1", columns="OCUP1", values="FACTOREL")
+    )
+    return (eo_matrix,)
 
 
 @app.cell
@@ -67,12 +103,6 @@ def _(referencia):
 
 
 @app.cell
-def _(eo, pd):
-    eo_matrix = pd.read_feather(eo)
-    return (eo_matrix,)
-
-
-@app.cell
 def _(eo_matrix, mo):
     t1 = mo.ui.table(eo_matrix, selection='single-cell', show_column_summaries=False)
     d1 = mo.ui.dropdown(['Edad','Formación','Situación','Estado_Civil'], value='Edad', label='Variable eje horizontal:  ')
@@ -83,8 +113,65 @@ def _(eo_matrix, mo):
 
 
 @app.cell
-def _(pd, src):
-    source = pd.read_feather(src)
+def _(epa_1d, np, referencia, safe_values_column, safe_values_row, t1):
+    source = (epa_1d.groupby(["ACT1", "OCUP1"], observed=True)
+                        .get_group((safe_values_row(t1), safe_values_column(t1)))
+                        .assign(
+                            Edad=lambda x: [
+                                referencia.query(
+                                    'Variable=="EDAD1"'
+                                ).Diccionario.values[0][i]
+                                for i in x.EDAD1
+                            ],
+                            Sexo=lambda x: [
+                                referencia.query(
+                                    'Variable=="SEXO1"'
+                                ).Diccionario.values[0][i]
+                                for i in x.SEXO1
+                            ],
+                            Situación=lambda x: [
+                                referencia.query(
+                                    'Variable=="SITU"'
+                                ).Diccionario.values[0][i]
+                                for i in x.SITU
+                            ],
+                            Contrato=lambda x: [
+                                referencia.query(
+                                    'Variable=="DUCON1"'
+                                ).Diccionario.values[0][i]
+                                if i != " "
+                                else np.nan
+                                for i in x.DUCON1
+                            ],
+                            Jornada=lambda x: [
+                                referencia.query(
+                                    'Variable=="PARCO1"'
+                                ).Diccionario.values[0][int(i)]
+                                if i != " "
+                                else np.nan
+                                for i in x.PARCO1
+                            ],
+                            Formación=lambda x: [
+                                {
+                                    "AN": "Analfabetos",
+                                    "P1": "Primaria incompleta",
+                                    "P2": "Primaria",
+                                    "S1": "ESO",
+                                    "SG": "Bachiller",
+                                    "SP": "FP",
+                                    "SU": "Superior",
+                                }[i]
+                                for i in x.NFORMA
+                            ],
+                            Estado_Civil=lambda x: [
+                                referencia.query(
+                                    'Variable=="ECIV1"'
+                                ).Diccionario.values[0][i]
+                                for i in x.ECIV1
+                            ],
+                            Nacimiento=lambda x:np.where(x.REGNA1=='   ','España','Extranjero')
+                        )
+             )
     return (source,)
 
 

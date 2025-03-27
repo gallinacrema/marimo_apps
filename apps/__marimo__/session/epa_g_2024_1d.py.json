@@ -1,0 +1,176 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.11.29"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "7fadacfbfade44483d11705e46d72170",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "9a58e5d90c0f7bc35eb240fe711057f5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "511c2cc95fae6c892ed11b1eaf72c1cc",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "57976e1714504c79dd61cd9519c74896",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "2d866523b428dd8b98db76611bc6e6d6",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "56fb54861f4176e0957aa5d599a4e115",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "d35d12af12fc8d675ebb945caf8018fd",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "c924a08b87ca873d2ae5f4ce9dc2a724",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "27ae76e3566a8dc728fe94e87e40af93",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "41747eab3eeb249c1065ca08e02707c7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><div><span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\">Industria de la alimentaci\u00f3n, textil, cuero, madera y papel (c\u00f3digos CNAE-09: del 10 al 18), (c\u00f3digos CNAE-93 del 15 al 22)<br>Directores y gerentes (c\u00f3digos CNO-2011). Direcci\u00f3n de las empresas y de las  Administraciones P\u00fablicas (c\u00f3digos CNO-1994)</span></span></div><div><marimo-ui-element object-id='BYtC-0' random-id='d2a93fc9-3f7f-56d8-d3f8-01ccfd6ab51a'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;./@file/1414-116712-RrcqQAEe.json&quot;' data-total-rows='10' data-total-columns='10' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-field-types='[[&quot;0&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;1&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;2&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;3&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;4&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;5&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;6&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;7&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;8&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;9&quot;, [&quot;number&quot;, &quot;float64&quot;]]]' data-selection='&quot;single-cell&quot;' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-row-headers='[&quot;ACT1&quot;]' data-has-stable-row-id='true'></marimo-table></marimo-ui-element></div><div><div style='display: flex;flex: 1;flex-direction: row;justify-content: space-between;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><div><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><div><marimo-ui-element object-id='BYtC-1' random-id='a9be3ba9-84d9-f17a-af60-e1164bb71f08'><marimo-dropdown data-initial-value='[&quot;Edad&quot;]' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Variable eje horizontal:  &lt;/span&gt;&lt;/span&gt;&quot;' data-options='[&quot;Edad&quot;, &quot;Formaci&#92;u00f3n&quot;, &quot;Situaci&#92;u00f3n&quot;, &quot;Estado_Civil&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element></div><div><marimo-ui-element object-id='BYtC-3' random-id='b08c01f3-2024-5b6c-ed9a-111bb1120a79'><marimo-dropdown data-initial-value='[&quot;Sexo&quot;]' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Variable color:  &lt;/span&gt;&lt;/span&gt;&quot;' data-options='[&quot;Sexo&quot;, &quot;Contrato&quot;, &quot;Jornada&quot;, &quot;Nacimiento&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element></div><div><marimo-mime-renderer data-mime='&quot;application/vnd.vegalite.v5+json&quot;' data-data='&quot;{&#92;n  &#92;&quot;&#36;schema&#92;&quot;: &#92;&quot;https://vega.github.io/schema/vega-lite/v5.20.1.json&#92;&quot;,&#92;n  &#92;&quot;config&#92;&quot;: {&#92;n    &#92;&quot;view&#92;&quot;: {&#92;n      &#92;&quot;continuousHeight&#92;&quot;: 300,&#92;n      &#92;&quot;continuousWidth&#92;&quot;: 300&#92;n    }&#92;n  },&#92;n  &#92;&quot;data&#92;&quot;: {&#92;n    &#92;&quot;name&#92;&quot;: &#92;&quot;data-83f28fb735bc20e7129b3af1ca2ed6de&#92;&quot;&#92;n  },&#92;n  &#92;&quot;datasets&#92;&quot;: {&#92;n    &#92;&quot;data-83f28fb735bc20e7129b3af1ca2ed6de&#92;&quot;: [&#92;n      {&#92;n        &#92;&quot;Edad&#92;&quot;: &#92;&quot;40 a 44 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n        &#92;&quot;FACTOREL&#92;&quot;: 181.6975,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Mujer&#92;&quot;&#92;n      },&#92;n      {&#92;n        &#92;&quot;Edad&#92;&quot;: &#92;&quot;45 a 49 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n        &#92;&quot;FACTOREL&#92;&quot;: 177.4575,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Hombre&#92;&quot;&#92;n      },&#92;n      {&#92;n        &#92;&quot;Edad&#92;&quot;: &#92;&quot;45 a 49 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n        &#92;&quot;FACTOREL&#92;&quot;: 72.345,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Mujer&#92;&quot;&#92;n      },&#92;n      {&#92;n        &#92;&quot;Edad&#92;&quot;: &#92;&quot;50 a 54 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n        &#92;&quot;FACTOREL&#92;&quot;: 457.6175,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Hombre&#92;&quot;&#92;n      },&#92;n      {&#92;n        &#92;&quot;Edad&#92;&quot;: &#92;&quot;55 a 59 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n        &#92;&quot;FACTOREL&#92;&quot;: 287.6975,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Hombre&#92;&quot;&#92;n      },&#92;n      {&#92;n        &#92;&quot;Edad&#92;&quot;: &#92;&quot;55 a 59 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n        &#92;&quot;FACTOREL&#92;&quot;: 139.79500000000002,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Mujer&#92;&quot;&#92;n      },&#92;n      {&#92;n        &#92;&quot;Edad&#92;&quot;: &#92;&quot;60 a 64 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n        &#92;&quot;FACTOREL&#92;&quot;: 28.552500000000002,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Hombre&#92;&quot;&#92;n      },&#92;n      {&#92;n        &#92;&quot;Edad&#92;&quot;: &#92;&quot;65 o m&#92;&#92;u00e1s a&#92;&#92;u00f1os     &#92;&quot;,&#92;n        &#92;&quot;FACTOREL&#92;&quot;: 62.01,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Mujer&#92;&quot;&#92;n      }&#92;n    ]&#92;n  },&#92;n  &#92;&quot;encoding&#92;&quot;: {&#92;n    &#92;&quot;color&#92;&quot;: {&#92;n      &#92;&quot;field&#92;&quot;: &#92;&quot;Sexo&#92;&quot;,&#92;n      &#92;&quot;legend&#92;&quot;: {&#92;n        &#92;&quot;title&#92;&quot;: null&#92;n      },&#92;n      &#92;&quot;type&#92;&quot;: &#92;&quot;nominal&#92;&quot;&#92;n    },&#92;n    &#92;&quot;x&#92;&quot;: {&#92;n      &#92;&quot;axis&#92;&quot;: {&#92;n        &#92;&quot;labelAngle&#92;&quot;: 45,&#92;n        &#92;&quot;title&#92;&quot;: null&#92;n      },&#92;n      &#92;&quot;field&#92;&quot;: &#92;&quot;Edad&#92;&quot;,&#92;n      &#92;&quot;scale&#92;&quot;: {&#92;n        &#92;&quot;domain&#92;&quot;: [&#92;n          &#92;&quot;0 a 4 a&#92;&#92;u00f1os     &#92;&quot;,&#92;n          &#92;&quot;5 a 9 a&#92;&#92;u00f1os     &#92;&quot;,&#92;n          &#92;&quot;10 a 15 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;16 a 19 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;20 a 24 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;25 a 29 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;30 a 34 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;35 a 39 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;40 a 44 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;45 a 49 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;50 a 54 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;55 a 59 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;60 a 64 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;65 o m&#92;&#92;u00e1s a&#92;&#92;u00f1os     &#92;&quot;&#92;n        ]&#92;n      },&#92;n      &#92;&quot;type&#92;&quot;: &#92;&quot;nominal&#92;&quot;&#92;n    },&#92;n    &#92;&quot;y&#92;&quot;: {&#92;n      &#92;&quot;axis&#92;&quot;: {&#92;n        &#92;&quot;title&#92;&quot;: null&#92;n      },&#92;n      &#92;&quot;field&#92;&quot;: &#92;&quot;FACTOREL&#92;&quot;,&#92;n      &#92;&quot;type&#92;&quot;: &#92;&quot;quantitative&#92;&quot;&#92;n    }&#92;n  },&#92;n  &#92;&quot;height&#92;&quot;: 200,&#92;n  &#92;&quot;mark&#92;&quot;: {&#92;n    &#92;&quot;type&#92;&quot;: &#92;&quot;bar&#92;&quot;&#92;n  },&#92;n  &#92;&quot;usermeta&#92;&quot;: {&#92;n    &#92;&quot;embedOptions&#92;&quot;: {}&#92;n  },&#92;n  &#92;&quot;width&#92;&quot;: 300&#92;n}&quot;'></marimo-mime-renderer></div></div></div><div><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><div><marimo-ui-element object-id='BYtC-2' random-id='0a548f2f-30d4-e166-a418-671faf1deb17'><marimo-dropdown data-initial-value='[&quot;Formaci&#92;u00f3n&quot;]' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Variable eje horizontal:  &lt;/span&gt;&lt;/span&gt;&quot;' data-options='[&quot;Edad&quot;, &quot;Formaci&#92;u00f3n&quot;, &quot;Situaci&#92;u00f3n&quot;, &quot;Estado_Civil&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element></div><div><marimo-ui-element object-id='BYtC-4' random-id='fd97e109-042e-86ab-1d04-e61e229ec006'><marimo-dropdown data-initial-value='[&quot;Sexo&quot;]' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Variable color:  &lt;/span&gt;&lt;/span&gt;&quot;' data-options='[&quot;Sexo&quot;, &quot;Contrato&quot;, &quot;Jornada&quot;, &quot;Nacimiento&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element></div><div><marimo-mime-renderer data-mime='&quot;application/vnd.vegalite.v5+json&quot;' data-data='&quot;{&#92;n  &#92;&quot;&#36;schema&#92;&quot;: &#92;&quot;https://vega.github.io/schema/vega-lite/v5.20.1.json&#92;&quot;,&#92;n  &#92;&quot;config&#92;&quot;: {&#92;n    &#92;&quot;view&#92;&quot;: {&#92;n      &#92;&quot;continuousHeight&#92;&quot;: 300,&#92;n      &#92;&quot;continuousWidth&#92;&quot;: 300&#92;n    }&#92;n  },&#92;n  &#92;&quot;data&#92;&quot;: {&#92;n    &#92;&quot;name&#92;&quot;: &#92;&quot;data-07e9995c231c91af0721013429d1232c&#92;&quot;&#92;n  },&#92;n  &#92;&quot;datasets&#92;&quot;: {&#92;n    &#92;&quot;data-07e9995c231c91af0721013429d1232c&#92;&quot;: [&#92;n      {&#92;n        &#92;&quot;FACTOREL&#92;&quot;: 106.89000000000001,&#92;n        &#92;&quot;Formaci&#92;&#92;u00f3n&#92;&quot;: &#92;&quot;Bachiller&#92;&quot;,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Hombre&#92;&quot;&#92;n      },&#92;n      {&#92;n        &#92;&quot;FACTOREL&#92;&quot;: 72.345,&#92;n        &#92;&quot;Formaci&#92;&#92;u00f3n&#92;&quot;: &#92;&quot;Bachiller&#92;&quot;,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Mujer&#92;&quot;&#92;n      },&#92;n      {&#92;n        &#92;&quot;FACTOREL&#92;&quot;: 142.5675,&#92;n        &#92;&quot;Formaci&#92;&#92;u00f3n&#92;&quot;: &#92;&quot;ESO&#92;&quot;,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Hombre&#92;&quot;&#92;n      },&#92;n      {&#92;n        &#92;&quot;FACTOREL&#92;&quot;: 62.01,&#92;n        &#92;&quot;Formaci&#92;&#92;u00f3n&#92;&quot;: &#92;&quot;Primaria&#92;&quot;,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Mujer&#92;&quot;&#92;n      },&#92;n      {&#92;n        &#92;&quot;FACTOREL&#92;&quot;: 701.8675000000001,&#92;n        &#92;&quot;Formaci&#92;&#92;u00f3n&#92;&quot;: &#92;&quot;Superior&#92;&quot;,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Hombre&#92;&quot;&#92;n      },&#92;n      {&#92;n        &#92;&quot;FACTOREL&#92;&quot;: 321.4925,&#92;n        &#92;&quot;Formaci&#92;&#92;u00f3n&#92;&quot;: &#92;&quot;Superior&#92;&quot;,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Mujer&#92;&quot;&#92;n      }&#92;n    ]&#92;n  },&#92;n  &#92;&quot;encoding&#92;&quot;: {&#92;n    &#92;&quot;color&#92;&quot;: {&#92;n      &#92;&quot;field&#92;&quot;: &#92;&quot;Sexo&#92;&quot;,&#92;n      &#92;&quot;legend&#92;&quot;: {&#92;n        &#92;&quot;title&#92;&quot;: null&#92;n      },&#92;n      &#92;&quot;type&#92;&quot;: &#92;&quot;nominal&#92;&quot;&#92;n    },&#92;n    &#92;&quot;x&#92;&quot;: {&#92;n      &#92;&quot;axis&#92;&quot;: {&#92;n        &#92;&quot;labelAngle&#92;&quot;: 45,&#92;n        &#92;&quot;title&#92;&quot;: null&#92;n      },&#92;n      &#92;&quot;field&#92;&quot;: &#92;&quot;Formaci&#92;&#92;u00f3n&#92;&quot;,&#92;n      &#92;&quot;scale&#92;&quot;: {&#92;n        &#92;&quot;domain&#92;&quot;: [&#92;n          &#92;&quot;Analfabetos&#92;&quot;,&#92;n          &#92;&quot;Primaria incompleta&#92;&quot;,&#92;n          &#92;&quot;Primaria&#92;&quot;,&#92;n          &#92;&quot;ESO&#92;&quot;,&#92;n          &#92;&quot;Bachiller&#92;&quot;,&#92;n          &#92;&quot;FP&#92;&quot;,&#92;n          &#92;&quot;Superior&#92;&quot;&#92;n        ]&#92;n      },&#92;n      &#92;&quot;type&#92;&quot;: &#92;&quot;nominal&#92;&quot;&#92;n    },&#92;n    &#92;&quot;y&#92;&quot;: {&#92;n      &#92;&quot;axis&#92;&quot;: {&#92;n        &#92;&quot;title&#92;&quot;: null&#92;n      },&#92;n      &#92;&quot;field&#92;&quot;: &#92;&quot;FACTOREL&#92;&quot;,&#92;n      &#92;&quot;type&#92;&quot;: &#92;&quot;quantitative&#92;&quot;&#92;n    }&#92;n  },&#92;n  &#92;&quot;height&#92;&quot;: 200,&#92;n  &#92;&quot;mark&#92;&quot;: {&#92;n    &#92;&quot;type&#92;&quot;: &#92;&quot;bar&#92;&quot;&#92;n  },&#92;n  &#92;&quot;usermeta&#92;&quot;: {&#92;n    &#92;&quot;embedOptions&#92;&quot;: {}&#92;n  },&#92;n  &#92;&quot;width&#92;&quot;: 300&#92;n}&quot;'></marimo-mime-renderer></div></div></div></div></div></div>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "sSKU",
+      "code_hash": "d5c3a7b167f72ade6229d10a085d8e49",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZXCD",
+      "code_hash": "2794307aaf86770c5475f228835e4252",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "gwTT",
+      "code_hash": "ef9cda7baf4bdcad5fa3edc1e2a2918e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
