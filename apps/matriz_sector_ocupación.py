@@ -16,8 +16,7 @@ def _():
     import numpy as np
     import pandas as pd
     import altair as alt
-    from epa.microdatos import diccionario
-    return alt, diccionario, np, pd, pyarrow
+    return alt, np, pd, pyarrow
 
 
 @app.cell
@@ -30,7 +29,8 @@ def _(mo):
     epa_g_2d = data_path.joinpath("epa_galicia_2024_2d.feather")
     cnae2009 = data_path.joinpath("cnae09.xls")
     cno2011 = data_path.joinpath("cno11.xls")
-    return cnae2009, cno2011, data_path, design_url_epa, epa_g_2d
+    referencia_pkl = data_path.joinpath("referencia.pkl")
+    return cnae2009, cno2011, data_path, design_url_epa, epa_g_2d, referencia_pkl
 
 
 @app.cell
@@ -107,8 +107,8 @@ def _():
 
 
 @app.cell
-def _(design_url_epa, diccionario):
-    referencia = diccionario(design_url_epa).filter(['Variable','Descripción ','Diccionario'])
+def _(referencia_pkl):
+    referencia = pd.read_pkl(referencia_pkl)
     return (referencia,)
 
 
