@@ -30,7 +30,16 @@ def _(mo):
     cnae2009 = data_path.joinpath("cnae09.xls")
     cno2011 = data_path.joinpath("cno11.xls")
     referencia_pkl = data_path.joinpath("referencia.pkl")
-    return cnae2009, cno2011, data_path, design_url_epa, epa_g_2d, referencia_pkl
+    matriz =  data_path.joinpath("Matriz_Simetrica_MIOGAL21.ods")
+    return (
+        cnae2009,
+        cno2011,
+        data_path,
+        design_url_epa,
+        epa_g_2d,
+        matriz,
+        referencia_pkl,
+    )
 
 
 @app.cell
@@ -107,7 +116,7 @@ def _():
 
 
 @app.cell
-def _(referencia_pkl):
+def _(pd, referencia_pkl):
     referencia = pd.read_pickle(referencia_pkl)
     return (referencia,)
 
@@ -287,20 +296,21 @@ def _(cnae2009, pd):
 
 
 @app.cell
-def _(pd):
+def _(matriz, pd):
     nova_fila=pd.DataFrame([{'Código':'96_99', 'Descrición rama homoxénea':'Outros servizos'}])
-    n2 = pd.concat([pd.read_excel('../../Documents/Data/ABANCA/Tablas/Matriz_Simetrica_MIOGAL18.ods', sheet_name=13, header=4, usecols=[1,3], skipfooter=3), nova_fila], ignore_index=True)
+    n2 = pd.concat([pd.read_excel(matriz, sheet_name=13, header=4, usecols=[1,3], skipfooter=3), nova_fila], ignore_index=True)
     n2['Código'] = n2['Código'].str.lstrip('R').str.rstrip('M')
     n2.iloc[31,1] = 'Suministro de auga, actividades de saneamento, xestión de residuos e descontaminación'
     n2.iloc[61,1] = 'Educación'
     n2.iloc[63,1] = 'Actividades sanitarias e de servizos sociais'
     n2.iloc[65,1] = 'Actividades artísticas, recreativas e de entretemento'
+    n2.iloc[65,0] = '90_93'
     return n2, nova_fila
 
 
 @app.cell
 def _(n1, n2, pd):
-    nomes = pd.concat([n1,n2], ignore_index=True).set_index('Código').drop(['03A','03B','10A','10B','10C','10D','10E','37_38N','85N','86_88N','90_93N','96','97']).to_dict()
+    nomes = pd.concat([n1,n2], ignore_index=True).set_index('Código').drop(['03A','03B','10A','10B','10C','10D','10E','37_38N','85N','86_88N','93','96','97']).to_dict()
     return (nomes,)
 
 
