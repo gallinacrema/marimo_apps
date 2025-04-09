@@ -138,12 +138,6 @@ def _(
 
 
 @app.cell
-def _(epa_2d):
-    epa_2d.Sector.value_counts()
-    return
-
-
-@app.cell
 def _(epa_2d, np, pd):
     eo_matrix = (
         pd.DataFrame(
