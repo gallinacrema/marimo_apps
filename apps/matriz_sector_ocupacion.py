@@ -108,7 +108,7 @@ def _():
 
 @app.cell
 def _(referencia_pkl):
-    referencia = pd.read_pkl(referencia_pkl)
+    referencia = pd.read_pickle(referencia_pkl)
     return (referencia,)
 
 
