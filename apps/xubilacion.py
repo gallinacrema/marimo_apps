@@ -169,7 +169,7 @@ def _():
 @app.cell
 def _(cnae2009, cnae_2d_to_miogal, np, pd):
     sectores = (
-        pd.read_excel(cnae2009, skiprows=2)
+        pd.read_feather(cnae2009)
         .astype("str")
         .rename(columns={"Unnamed: 0": "CNAE"})
         .assign(CNAE_2D=lambda x: [i if len(i) == 2 else np.nan for i in x.CNAE])
@@ -375,21 +375,21 @@ def _(
 
 @app.cell
 def _(cnae2009, cno2011, pd):
-    cnae = pd.read_excel(cnae2009, skiprows=2).astype('str').set_index('Unnamed: 0').to_dict()
-    cno = pd.read_excel(cno2011, skiprows=2).astype('str').apply(lambda x:[i.lstrip('<b>').rstrip('</b>') for i in x]).set_index('Unnamed: 0').to_dict()
+    cnae = pd.read_feather(cnae2009).astype('str').set_index('Unnamed: 0').to_dict()
+    cno = pd.read_feather(cno2011).astype('str').apply(lambda x:[i.lstrip('<b>').rstrip('</b>') for i in x]).set_index('Unnamed: 0').to_dict()
     return cnae, cno
 
 
 @app.cell
 def _(cnae2009, pd):
-    n1 = pd.read_excel(cnae2009, skiprows=2).astype('str').rename(columns={'Unnamed: 0':'Código', 'Descrición':'Descrición rama homoxénea'}).query("Código=='03'|Código=='10'")
+    n1 = pd.read_feather(cnae2009).astype('str').rename(columns={'Unnamed: 0':'Código', 'Descrición':'Descrición rama homoxénea'}).query("Código=='03'|Código=='10'")
     return (n1,)
 
 
 @app.cell
 def _(matriz, pd):
     nova_fila=pd.DataFrame([{'Código':'96_99', 'Descrición rama homoxénea':'Outros servizos'}])
-    n2 = pd.concat([pd.read_excel(matriz, sheet_name=13, header=4, usecols=[1,3], skipfooter=3), nova_fila], ignore_index=True)
+    n2 = pd.concat([pd.read_feather(matriz), nova_fila], ignore_index=True)
     n2['Código'] = n2['Código'].str.lstrip('R').str.rstrip('M')
     n2.iloc[31,1] = 'Suministro de auga, actividades de saneamento, xestión de residuos e descontaminación'
     n2.iloc[61,1] = 'Educación'
