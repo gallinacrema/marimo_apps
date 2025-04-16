@@ -12,11 +12,11 @@ def _():
 
 @app.cell
 def _():
+    import pyarrow
     import numpy as np
     import pandas as pd
     import altair as alt
-    from epa.microdatos import microdatos, diccionario
-    return alt, diccionario, microdatos, np, pd
+    return pyarrow, alt, np, pd
 
 
 @app.cell
