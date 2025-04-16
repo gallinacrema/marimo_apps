@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.12.6"
+__generated_with = "0.12.9"
 app = marimo.App(width="medium")
 
 
@@ -16,7 +16,7 @@ def _():
     import numpy as np
     import pandas as pd
     import altair as alt
-    return pyarrow, alt, np, pd
+    return alt, np, pd, pyarrow
 
 
 @app.cell
@@ -34,8 +34,8 @@ def _(mo):
         cnae2009,
         cno2011,
         data_path,
-        referencia_pkl,
         matriz,
+        referencia_pkl,
         xubilados_galicia,
     )
 
@@ -170,6 +170,7 @@ def _():
 def _(cnae2009, cnae_2d_to_miogal, np, pd):
     sectores = (
         pd.read_feather(cnae2009)
+        .reset_index()
         .astype("str")
         .rename(columns={"Unnamed: 0": "CNAE"})
         .assign(CNAE_2D=lambda x: [i if len(i) == 2 else np.nan for i in x.CNAE])
@@ -375,14 +376,14 @@ def _(
 
 @app.cell
 def _(cnae2009, cno2011, pd):
-    cnae = pd.read_feather(cnae2009).astype('str').set_index('Unnamed: 0').to_dict()
-    cno = pd.read_feather(cno2011).astype('str').apply(lambda x:[i.lstrip('<b>').rstrip('</b>') for i in x]).set_index('Unnamed: 0').to_dict()
+    cnae = pd.read_feather(cnae2009).reset_index().astype('str').set_index('Unnamed: 0').to_dict()
+    cno = pd.read_feather(cno2011).reset_index().astype('str').apply(lambda x:[i.lstrip('<b>').rstrip('</b>') for i in x]).set_index('Unnamed: 0').to_dict()
     return cnae, cno
 
 
 @app.cell
 def _(cnae2009, pd):
-    n1 = pd.read_feather(cnae2009).astype('str').rename(columns={'Unnamed: 0':'Código', 'Descrición':'Descrición rama homoxénea'}).query("Código=='03'|Código=='10'")
+    n1 = pd.read_feather(cnae2009).reset_index().astype('str').rename(columns={'Unnamed: 0':'Código', 'Descrición':'Descrición rama homoxénea'}).query("Código=='03'|Código=='10'")
     return (n1,)
 
 
