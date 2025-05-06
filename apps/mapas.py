@@ -12,7 +12,19 @@ def _():
 
 @app.cell
 def _():
+    import micropip
+    return (micropip,)
+
+
+@app.cell
+async def _(micropip):
+    await micropip.install("pyogrio")
     import pyogrio
+    return
+
+
+@app.cell
+def _():
     import altair as alt
     import geopandas as gpd
     return alt, gpd
