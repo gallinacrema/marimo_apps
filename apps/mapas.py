@@ -12,10 +12,9 @@ def _():
 
 @app.cell
 def _():
-    import pandas as pd
     import altair as alt
     import geopandas as gpd
-    return alt, gpd, pd
+    return alt, gpd
 
 
 @app.cell
@@ -24,27 +23,13 @@ def _(mo):
             mo.notebook_location() / "public"
         )
 
-    shapefiles = data_path.joinpath("concellos_galicia.geojson")
-    df = data_path.joinpath("ratio.xlsx")
-    return df, shapefiles
+    shapefiles = data_path.joinpath("ratio_concellos_galicia.shp")
+    return (shapefiles,)
 
 
 @app.cell
 def _(gpd, shapefiles):
-    concellos = gpd.read_file(shapefiles)
-    return (concellos,)
-
-
-@app.cell
-def _(concellos, df, pd):
-    datos = concellos.merge(
-        pd.read_excel(df, header=2)
-        .assign(
-            CODIGOINE=lambda x: x.loc[:, "Codigo Municipio"].astype("str"),
-            Total=lambda x:x.TOTAL.round(1),
-            Menores_45=lambda x: x.loc[:, "MENOR-45"].round(1)
-        )
-    ).drop(['Codigo Municipio','TOTAL','MENOR-45'], axis=1)
+    datos = gpd.read_file(shapefiles)
     return (datos,)
 
 
