@@ -29,7 +29,7 @@ def _(mo):
 
 @app.cell
 def _(gpd, shapefiles):
-    datos = gpd.read_file(shapefiles)
+    datos = gpd.read_file(shapefiles, engine="pyogrio")
     return (datos,)
 
 
