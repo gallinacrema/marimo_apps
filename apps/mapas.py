@@ -12,6 +12,7 @@ def _():
 
 @app.cell
 def _():
+    import pyogrio
     import altair as alt
     import geopandas as gpd
     return alt, gpd
