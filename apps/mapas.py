@@ -12,22 +12,10 @@ def _():
 
 @app.cell
 def _():
-    import micropip
-    return (micropip,)
-
-
-@app.cell
-async def _(micropip):
-    await micropip.install("pyogrio")
-    import pyogrio
-    return
-
-
-@app.cell
-def _():
+    import pandas as pd
     import altair as alt
     import geopandas as gpd
-    return alt, gpd
+    return alt, gpd, pd
 
 
 @app.cell
@@ -36,14 +24,26 @@ def _(mo):
             mo.notebook_location() / "public"
         )
 
-    shapefiles = data_path.joinpath("ratio_concellos_galicia.shp")
-    return (shapefiles,)
+    shapefiles = data_path.joinpath("Concellos_IGN.shp")
+    ratios = data_path.joinpath("ratio.xlsx")
+    return ratios, shapefiles
 
 
 @app.cell
-def _(gpd, shapefiles):
-    datos = gpd.read_file(shapefiles, engine="pyogrio")
-    return (datos,)
+def _(gpd, pd, ratios, shapefiles):
+    concellos = (
+        gpd.read_file(shapefiles)
+        .filter(["CODIGOINE", "geometry"])
+        .merge(
+            pd.read_excel(ratios, header=2).assign(
+                CODIGOINE=lambda x: x.loc[:, "Codigo Municipio"].astype("str"),
+                Total=lambda x: x.TOTAL.round(1),
+                Menores_45=lambda x: x.loc[:, "MENOR-45"].round(1),
+            )
+            .filter(['CODIGOINE',' Municipio','Total', 'Menores_45'])
+        )
+    )
+    return (concellos,)
 
 
 @app.cell
@@ -53,15 +53,15 @@ def _(mo):
 
 
 @app.cell
-def _(alt, datos):
-    basemap = alt.Chart(datos).mark_geoshape(
+def _(alt, concellos):
+    basemap = alt.Chart(concellos).mark_geoshape(
                 stroke='black',
                 strokeOpacity=.05
             ).encode(
                 shape='geometry:G'
             ).transform_lookup(
                 lookup='CODIGOINE',
-                from_=alt.LookupData(data=datos, key='CODIGOINE'),
+                from_=alt.LookupData(data=concellos, key='CODIGOINE'),
                 as_='geometry'
             ).properties(
                 width=600,
