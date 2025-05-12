@@ -1,0 +1,248 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.13.6"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "7fadacfbfade44483d11705e46d72170",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "734dbc5931b501e1e3f6306d55adda3c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "dbb650731c05c3b388230c766263b7eb",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "d70663fdfb13e5df330454fd968187c8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "0526cf63eb6bb5d7596a2348e8bb163b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "1476ed9a2ba6bd23415b894d543caf8f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "ed5372d517dff36e7a90b274329c1ee8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "57976e1714504c79dd61cd9519c74896",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "56fb54861f4176e0957aa5d599a4e115",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "eddfc8909da5d1cb9cc0e70917226c7e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "7fd710ebb225ff86fc354498f4056a77",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "614e641980ef0bf3107941d7085a4cde",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "101aed2f9209ea88b3d47486b99509e7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "c6d8ccfb0e236443325d273c1949c048",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "b0d038d1fe51988b744fb54ba2a08a42",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "627f5508dae6b7ff8f850e9af8efeaba",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\"><strong>02: </strong>Silvicultura e explotacion forestal<br><strong>1: </strong>Directores e xerentes</span></span><marimo-ui-element object-id='Kclp-0' random-id='c1be2c70-2124-da04-5201-b4763778f4bb'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;Sector&#92;&quot;:&#92;&quot;01&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:0,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:344.0,&#92;&quot;2&#92;&quot;:685.0,&#92;&quot;3&#92;&quot;:564.0,&#92;&quot;4&#92;&quot;:329.0,&#92;&quot;5&#92;&quot;:236.0,&#92;&quot;6&#92;&quot;:36111.0,&#92;&quot;7&#92;&quot;:87.0,&#92;&quot;8&#92;&quot;:1607.0,&#92;&quot;9&#92;&quot;:6485.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;02&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:1,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:99.0,&#92;&quot;2&#92;&quot;:null,&#92;&quot;3&#92;&quot;:513.0,&#92;&quot;4&#92;&quot;:422.0,&#92;&quot;5&#92;&quot;:1827.0,&#92;&quot;6&#92;&quot;:1949.0,&#92;&quot;7&#92;&quot;:null,&#92;&quot;8&#92;&quot;:1093.0,&#92;&quot;9&#92;&quot;:1490.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;03&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:2,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:640.0,&#92;&quot;2&#92;&quot;:342.0,&#92;&quot;3&#92;&quot;:952.0,&#92;&quot;4&#92;&quot;:105.0,&#92;&quot;5&#92;&quot;:620.0,&#92;&quot;6&#92;&quot;:14275.0,&#92;&quot;7&#92;&quot;:1143.0,&#92;&quot;8&#92;&quot;:354.0,&#92;&quot;9&#92;&quot;:385.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;05_09&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:3,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:403.0,&#92;&quot;2&#92;&quot;:null,&#92;&quot;3&#92;&quot;:261.0,&#92;&quot;4&#92;&quot;:365.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:618.0,&#92;&quot;8&#92;&quot;:1725.0,&#92;&quot;9&#92;&quot;:859.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;10&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:4,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:715.0,&#92;&quot;2&#92;&quot;:253.0,&#92;&quot;3&#92;&quot;:3115.0,&#92;&quot;4&#92;&quot;:1721.0,&#92;&quot;5&#92;&quot;:2246.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:16379.0,&#92;&quot;8&#92;&quot;:8882.0,&#92;&quot;9&#92;&quot;:4807.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;11_12&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:5,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:330.0,&#92;&quot;2&#92;&quot;:64.0,&#92;&quot;3&#92;&quot;:753.0,&#92;&quot;4&#92;&quot;:342.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:980.0,&#92;&quot;8&#92;&quot;:2243.0,&#92;&quot;9&#92;&quot;:466.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;13&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:6,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:null,&#92;&quot;2&#92;&quot;:164.0,&#92;&quot;3&#92;&quot;:59.0,&#92;&quot;4&#92;&quot;:223.0,&#92;&quot;5&#92;&quot;:94.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:459.0,&#92;&quot;8&#92;&quot;:709.0,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;14_15&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:7,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:249.0,&#92;&quot;2&#92;&quot;:736.0,&#92;&quot;3&#92;&quot;:770.0,&#92;&quot;4&#92;&quot;:423.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:2047.0,&#92;&quot;8&#92;&quot;:2505.0,&#92;&quot;9&#92;&quot;:981.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;16&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:8,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:111.0,&#92;&quot;2&#92;&quot;:832.0,&#92;&quot;3&#92;&quot;:809.0,&#92;&quot;4&#92;&quot;:403.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:2531.0,&#92;&quot;8&#92;&quot;:2557.0,&#92;&quot;9&#92;&quot;:648.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;17&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:9,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:null,&#92;&quot;2&#92;&quot;:249.0,&#92;&quot;3&#92;&quot;:557.0,&#92;&quot;4&#92;&quot;:393.0,&#92;&quot;5&#92;&quot;:165.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:281.0,&#92;&quot;8&#92;&quot;:332.0,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;18&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:10,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:null,&#92;&quot;2&#92;&quot;:351.0,&#92;&quot;3&#92;&quot;:38.0,&#92;&quot;4&#92;&quot;:133.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:1762.0,&#92;&quot;8&#92;&quot;:173.0,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;19&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:11,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:208.0,&#92;&quot;2&#92;&quot;:184.0,&#92;&quot;3&#92;&quot;:414.0,&#92;&quot;4&#92;&quot;:358.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:217.0,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;20_21&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:12,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:239.0,&#92;&quot;2&#92;&quot;:1269.0,&#92;&quot;3&#92;&quot;:1620.0,&#92;&quot;4&#92;&quot;:293.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:450.0,&#92;&quot;8&#92;&quot;:771.0,&#92;&quot;9&#92;&quot;:199.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;22&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:13,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:null,&#92;&quot;2&#92;&quot;:103.0,&#92;&quot;3&#92;&quot;:1123.0,&#92;&quot;4&#92;&quot;:592.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:474.0,&#92;&quot;8&#92;&quot;:2016.0,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;23&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:14,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:112.0,&#92;&quot;2&#92;&quot;:267.0,&#92;&quot;3&#92;&quot;:246.0,&#92;&quot;4&#92;&quot;:352.0,&#92;&quot;5&#92;&quot;:58.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:1295.0,&#92;&quot;8&#92;&quot;:2458.0,&#92;&quot;9&#92;&quot;:610.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;24&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:15,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:null,&#92;&quot;2&#92;&quot;:151.0,&#92;&quot;3&#92;&quot;:495.0,&#92;&quot;4&#92;&quot;:305.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:968.0,&#92;&quot;8&#92;&quot;:1409.0,&#92;&quot;9&#92;&quot;:90.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;25&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:16,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:1217.0,&#92;&quot;2&#92;&quot;:506.0,&#92;&quot;3&#92;&quot;:3190.0,&#92;&quot;4&#92;&quot;:1660.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:14239.0,&#92;&quot;8&#92;&quot;:881.0,&#92;&quot;9&#92;&quot;:894.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;26&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:17,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:null,&#92;&quot;2&#92;&quot;:201.0,&#92;&quot;3&#92;&quot;:195.0,&#92;&quot;4&#92;&quot;:224.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:53.0,&#92;&quot;8&#92;&quot;:405.0,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;27&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:18,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:69.0,&#92;&quot;2&#92;&quot;:485.0,&#92;&quot;3&#92;&quot;:360.0,&#92;&quot;4&#92;&quot;:48.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:1215.0,&#92;&quot;8&#92;&quot;:792.0,&#92;&quot;9&#92;&quot;:86.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;28&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:19,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:43.0,&#92;&quot;2&#92;&quot;:1138.0,&#92;&quot;3&#92;&quot;:1920.0,&#92;&quot;4&#92;&quot;:325.0,&#92;&quot;5&#92;&quot;:56.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:2625.0,&#92;&quot;8&#92;&quot;:736.0,&#92;&quot;9&#92;&quot;:248.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;29&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:20,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:114.0,&#92;&quot;2&#92;&quot;:1988.0,&#92;&quot;3&#92;&quot;:1841.0,&#92;&quot;4&#92;&quot;:1302.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:4762.0,&#92;&quot;8&#92;&quot;:13168.0,&#92;&quot;9&#92;&quot;:558.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;30&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:21,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:null,&#92;&quot;2&#92;&quot;:466.0,&#92;&quot;3&#92;&quot;:1230.0,&#92;&quot;4&#92;&quot;:247.0,&#92;&quot;5&#92;&quot;:67.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:3323.0,&#92;&quot;8&#92;&quot;:854.0,&#92;&quot;9&#92;&quot;:113.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;31&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:22,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:130.0,&#92;&quot;2&#92;&quot;:96.0,&#92;&quot;3&#92;&quot;:689.0,&#92;&quot;4&#92;&quot;:79.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:4811.0,&#92;&quot;8&#92;&quot;:525.0,&#92;&quot;9&#92;&quot;:64.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;32&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:23,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:54.0,&#92;&quot;2&#92;&quot;:257.0,&#92;&quot;3&#92;&quot;:695.0,&#92;&quot;4&#92;&quot;:363.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:782.0,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:143.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;33&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:24,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:404.0,&#92;&quot;2&#92;&quot;:899.0,&#92;&quot;3&#92;&quot;:1147.0,&#92;&quot;4&#92;&quot;:695.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:6880.0,&#92;&quot;8&#92;&quot;:33.0,&#92;&quot;9&#92;&quot;:503.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;35&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:25,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:124.0,&#92;&quot;2&#92;&quot;:406.0,&#92;&quot;3&#92;&quot;:1584.0,&#92;&quot;4&#92;&quot;:577.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:477.0,&#92;&quot;8&#92;&quot;:256.0,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;36_39&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:26,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:112.0,&#92;&quot;2&#92;&quot;:258.0,&#92;&quot;3&#92;&quot;:1355.0,&#92;&quot;4&#92;&quot;:380.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:384.0,&#92;&quot;8&#92;&quot;:2097.0,&#92;&quot;9&#92;&quot;:3530.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;41_43&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:27,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:3546.0,&#92;&quot;2&#92;&quot;:3823.0,&#92;&quot;3&#92;&quot;:5673.0,&#92;&quot;4&#92;&quot;:4348.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:57066.0,&#92;&quot;8&#92;&quot;:4431.0,&#92;&quot;9&#92;&quot;:3429.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;45&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:28,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:1060.0,&#92;&quot;2&#92;&quot;:326.0,&#92;&quot;3&#92;&quot;:2083.0,&#92;&quot;4&#92;&quot;:3378.0,&#92;&quot;5&#92;&quot;:2659.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:13124.0,&#92;&quot;8&#92;&quot;:443.0,&#92;&quot;9&#92;&quot;:1604.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;46&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:29,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:3001.0,&#92;&quot;2&#92;&quot;:3109.0,&#92;&quot;3&#92;&quot;:14077.0,&#92;&quot;4&#92;&quot;:7306.0,&#92;&quot;5&#92;&quot;:4289.0,&#92;&quot;6&#92;&quot;:218.0,&#92;&quot;7&#92;&quot;:2967.0,&#92;&quot;8&#92;&quot;:4698.0,&#92;&quot;9&#92;&quot;:4409.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;47&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:30,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:1112.0,&#92;&quot;2&#92;&quot;:5208.0,&#92;&quot;3&#92;&quot;:4221.0,&#92;&quot;4&#92;&quot;:4242.0,&#92;&quot;5&#92;&quot;:78120.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:1485.0,&#92;&quot;8&#92;&quot;:1667.0,&#92;&quot;9&#92;&quot;:6705.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;49&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:31,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:715.0,&#92;&quot;2&#92;&quot;:127.0,&#92;&quot;3&#92;&quot;:600.0,&#92;&quot;4&#92;&quot;:2386.0,&#92;&quot;5&#92;&quot;:1245.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:48.0,&#92;&quot;8&#92;&quot;:24775.0,&#92;&quot;9&#92;&quot;:302.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;50_51&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:32,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:100.0,&#92;&quot;2&#92;&quot;:118.0,&#92;&quot;3&#92;&quot;:583.0,&#92;&quot;4&#92;&quot;:1489.0,&#92;&quot;5&#92;&quot;:1019.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:44.0,&#92;&quot;8&#92;&quot;:427.0,&#92;&quot;9&#92;&quot;:49.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;52&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:33,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:254.0,&#92;&quot;2&#92;&quot;:354.0,&#92;&quot;3&#92;&quot;:1305.0,&#92;&quot;4&#92;&quot;:3167.0,&#92;&quot;5&#92;&quot;:752.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:910.0,&#92;&quot;8&#92;&quot;:2729.0,&#92;&quot;9&#92;&quot;:5485.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;53&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:34,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:227.0,&#92;&quot;2&#92;&quot;:null,&#92;&quot;3&#92;&quot;:389.0,&#92;&quot;4&#92;&quot;:3571.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:null,&#92;&quot;8&#92;&quot;:2978.0,&#92;&quot;9&#92;&quot;:169.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;55&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:35,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:879.0,&#92;&quot;2&#92;&quot;:null,&#92;&quot;3&#92;&quot;:691.0,&#92;&quot;4&#92;&quot;:2054.0,&#92;&quot;5&#92;&quot;:4141.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:499.0,&#92;&quot;8&#92;&quot;:37.0,&#92;&quot;9&#92;&quot;:3755.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;56&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:36,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:867.0,&#92;&quot;2&#92;&quot;:83.0,&#92;&quot;3&#92;&quot;:422.0,&#92;&quot;4&#92;&quot;:672.0,&#92;&quot;5&#92;&quot;:52851.0,&#92;&quot;6&#92;&quot;:133.0,&#92;&quot;7&#92;&quot;:null,&#92;&quot;8&#92;&quot;:633.0,&#92;&quot;9&#92;&quot;:8370.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;58&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:37,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:null,&#92;&quot;2&#92;&quot;:2160.0,&#92;&quot;3&#92;&quot;:689.0,&#92;&quot;4&#92;&quot;:117.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:null,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:79.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;59_60&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:38,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:null,&#92;&quot;2&#92;&quot;:2433.0,&#92;&quot;3&#92;&quot;:1883.0,&#92;&quot;4&#92;&quot;:162.0,&#92;&quot;5&#92;&quot;:221.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:108.0,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;61&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:39,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:135.0,&#92;&quot;2&#92;&quot;:1160.0,&#92;&quot;3&#92;&quot;:1943.0,&#92;&quot;4&#92;&quot;:322.0,&#92;&quot;5&#92;&quot;:613.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:551.0,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;62_63&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:40,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:182.0,&#92;&quot;2&#92;&quot;:6417.0,&#92;&quot;3&#92;&quot;:15249.0,&#92;&quot;4&#92;&quot;:554.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:188.0,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;64&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:41,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:1665.0,&#92;&quot;2&#92;&quot;:2300.0,&#92;&quot;3&#92;&quot;:4488.0,&#92;&quot;4&#92;&quot;:2854.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:null,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:157.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;65&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:42,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:85.0,&#92;&quot;2&#92;&quot;:294.0,&#92;&quot;3&#92;&quot;:1357.0,&#92;&quot;4&#92;&quot;:562.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:46.0,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;66&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:43,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:243.0,&#92;&quot;2&#92;&quot;:null,&#92;&quot;3&#92;&quot;:3524.0,&#92;&quot;4&#92;&quot;:1033.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:null,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;68&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:44,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:81.0,&#92;&quot;2&#92;&quot;:343.0,&#92;&quot;3&#92;&quot;:3403.0,&#92;&quot;4&#92;&quot;:1838.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:null,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;69_70&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:45,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:241.0,&#92;&quot;2&#92;&quot;:15851.0,&#92;&quot;3&#92;&quot;:4034.0,&#92;&quot;4&#92;&quot;:6670.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:null,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;71&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:46,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:null,&#92;&quot;2&#92;&quot;:11042.0,&#92;&quot;3&#92;&quot;:4756.0,&#92;&quot;4&#92;&quot;:996.0,&#92;&quot;5&#92;&quot;:66.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:141.0,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:332.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;72&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:47,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:268.0,&#92;&quot;2&#92;&quot;:2665.0,&#92;&quot;3&#92;&quot;:296.0,&#92;&quot;4&#92;&quot;:324.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:275.0,&#92;&quot;8&#92;&quot;:40.0,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;73&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:48,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:null,&#92;&quot;2&#92;&quot;:1518.0,&#92;&quot;3&#92;&quot;:764.0,&#92;&quot;4&#92;&quot;:87.0,&#92;&quot;5&#92;&quot;:185.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:70.0,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:48.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;74_75&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:49,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:null,&#92;&quot;2&#92;&quot;:3439.0,&#92;&quot;3&#92;&quot;:4014.0,&#92;&quot;4&#92;&quot;:425.0,&#92;&quot;5&#92;&quot;:59.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:43.0,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;77&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:50,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:57.0,&#92;&quot;2&#92;&quot;:null,&#92;&quot;3&#92;&quot;:342.0,&#92;&quot;4&#92;&quot;:344.0,&#92;&quot;5&#92;&quot;:256.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:166.0,&#92;&quot;8&#92;&quot;:474.0,&#92;&quot;9&#92;&quot;:366.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;78&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:51,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:99.0,&#92;&quot;2&#92;&quot;:373.0,&#92;&quot;3&#92;&quot;:null,&#92;&quot;4&#92;&quot;:519.0,&#92;&quot;5&#92;&quot;:72.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:null,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:131.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;79&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:52,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:568.0,&#92;&quot;2&#92;&quot;:null,&#92;&quot;3&#92;&quot;:null,&#92;&quot;4&#92;&quot;:1660.0,&#92;&quot;5&#92;&quot;:468.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:null,&#92;&quot;8&#92;&quot;:40.0,&#92;&quot;9&#92;&quot;:209.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;80_82&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:53,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:270.0,&#92;&quot;2&#92;&quot;:700.0,&#92;&quot;3&#92;&quot;:2395.0,&#92;&quot;4&#92;&quot;:6536.0,&#92;&quot;5&#92;&quot;:8468.0,&#92;&quot;6&#92;&quot;:3013.0,&#92;&quot;7&#92;&quot;:1668.0,&#92;&quot;8&#92;&quot;:165.0,&#92;&quot;9&#92;&quot;:21032.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;84&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:54,&#92;&quot;0&#92;&quot;:5197.0,&#92;&quot;1&#92;&quot;:1856.0,&#92;&quot;2&#92;&quot;:15848.0,&#92;&quot;3&#92;&quot;:9667.0,&#92;&quot;4&#92;&quot;:11261.0,&#92;&quot;5&#92;&quot;:13862.0,&#92;&quot;6&#92;&quot;:506.0,&#92;&quot;7&#92;&quot;:1559.0,&#92;&quot;8&#92;&quot;:659.0,&#92;&quot;9&#92;&quot;:4099.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;85&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:55,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:1677.0,&#92;&quot;2&#92;&quot;:64677.0,&#92;&quot;3&#92;&quot;:4676.0,&#92;&quot;4&#92;&quot;:3596.0,&#92;&quot;5&#92;&quot;:2945.0,&#92;&quot;6&#92;&quot;:175.0,&#92;&quot;7&#92;&quot;:253.0,&#92;&quot;8&#92;&quot;:58.0,&#92;&quot;9&#92;&quot;:2128.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;86_88&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:56,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:1079.0,&#92;&quot;2&#92;&quot;:44025.0,&#92;&quot;3&#92;&quot;:7795.0,&#92;&quot;4&#92;&quot;:7920.0,&#92;&quot;5&#92;&quot;:42803.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:767.0,&#92;&quot;8&#92;&quot;:958.0,&#92;&quot;9&#92;&quot;:5713.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;90_93&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:57,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:462.0,&#92;&quot;2&#92;&quot;:3065.0,&#92;&quot;3&#92;&quot;:10517.0,&#92;&quot;4&#92;&quot;:3315.0,&#92;&quot;5&#92;&quot;:2674.0,&#92;&quot;6&#92;&quot;:51.0,&#92;&quot;7&#92;&quot;:808.0,&#92;&quot;8&#92;&quot;:154.0,&#92;&quot;9&#92;&quot;:1354.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;94&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:58,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:291.0,&#92;&quot;2&#92;&quot;:2736.0,&#92;&quot;3&#92;&quot;:977.0,&#92;&quot;4&#92;&quot;:1173.0,&#92;&quot;5&#92;&quot;:230.0,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:null,&#92;&quot;8&#92;&quot;:null,&#92;&quot;9&#92;&quot;:363.0},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;95&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:59,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:null,&#92;&quot;2&#92;&quot;:null,&#92;&quot;3&#92;&quot;:269.0,&#92;&quot;4&#92;&quot;:251.0,&#92;&quot;5&#92;&quot;:null,&#92;&quot;6&#92;&quot;:null,&#92;&quot;7&#92;&quot;:1727.0,&#92;&quot;8&#92;&quot;:93.0,&#92;&quot;9&#92;&quot;:null},{&#92;&quot;Sector&#92;&quot;:&#92;&quot;96_99&#92;&quot;,&#92;&quot;_marimo_row_id&#92;&quot;:60,&#92;&quot;0&#92;&quot;:null,&#92;&quot;1&#92;&quot;:480.0,&#92;&quot;2&#92;&quot;:529.0,&#92;&quot;3&#92;&quot;:558.0,&#92;&quot;4&#92;&quot;:427.0,&#92;&quot;5&#92;&quot;:22461.0,&#92;&quot;6&#92;&quot;:86.0,&#92;&quot;7&#92;&quot;:285.0,&#92;&quot;8&#92;&quot;:1233.0,&#92;&quot;9&#92;&quot;:20833.0}]&quot;' data-total-rows='61' data-total-columns='10' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='61' data-field-types='[[&quot;0&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;1&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;2&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;3&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;4&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;5&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;6&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;7&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;8&quot;, [&quot;number&quot;, &quot;float64&quot;]], [&quot;9&quot;, [&quot;number&quot;, &quot;float64&quot;]]]' data-selection='&quot;single-cell&quot;' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-row-headers='[&quot;Sector&quot;]' data-has-stable-row-id='true' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element></div>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "2aec92402a39d56f3e132f1c5fb18d4b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: row;justify-content: space-between;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-ui-element object-id='Kclp-1' random-id='61f8f4fe-804d-2852-bbf3-0b4f6026ee79'><marimo-dropdown data-initial-value='[&quot;Edad&quot;]' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Variable eje horizontal:  &lt;/span&gt;&lt;/span&gt;&quot;' data-options='[&quot;Edad&quot;, &quot;Formaci&#92;u00f3n&quot;, &quot;Situaci&#92;u00f3n&quot;, &quot;Estado_Civil&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element><marimo-ui-element object-id='Kclp-3' random-id='583bfeac-c2fd-45b7-9d0a-49f9bf4f8fd8'><marimo-dropdown data-initial-value='[&quot;Sexo&quot;]' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Variable color:  &lt;/span&gt;&lt;/span&gt;&quot;' data-options='[&quot;Sexo&quot;, &quot;Contrato&quot;, &quot;Jornada&quot;, &quot;Nacimiento&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element><marimo-mime-renderer data-mime='&quot;application/vnd.vegalite.v5+json&quot;' data-data='&quot;{&#92;n  &#92;&quot;&#36;schema&#92;&quot;: &#92;&quot;https://vega.github.io/schema/vega-lite/v5.20.1.json&#92;&quot;,&#92;n  &#92;&quot;config&#92;&quot;: {&#92;n    &#92;&quot;view&#92;&quot;: {&#92;n      &#92;&quot;continuousHeight&#92;&quot;: 300,&#92;n      &#92;&quot;continuousWidth&#92;&quot;: 300&#92;n    }&#92;n  },&#92;n  &#92;&quot;data&#92;&quot;: {&#92;n    &#92;&quot;name&#92;&quot;: &#92;&quot;data-ce98ff0f9eccc3701e7e56a7346ac7d5&#92;&quot;&#92;n  },&#92;n  &#92;&quot;datasets&#92;&quot;: {&#92;n    &#92;&quot;data-ce98ff0f9eccc3701e7e56a7346ac7d5&#92;&quot;: [&#92;n      {&#92;n        &#92;&quot;Edad&#92;&quot;: &#92;&quot;40 a 44 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n        &#92;&quot;Factor&#92;&quot;: 99.16499999999999,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Hombre&#92;&quot;&#92;n      }&#92;n    ]&#92;n  },&#92;n  &#92;&quot;encoding&#92;&quot;: {&#92;n    &#92;&quot;color&#92;&quot;: {&#92;n      &#92;&quot;field&#92;&quot;: &#92;&quot;Sexo&#92;&quot;,&#92;n      &#92;&quot;legend&#92;&quot;: {&#92;n        &#92;&quot;title&#92;&quot;: null&#92;n      },&#92;n      &#92;&quot;type&#92;&quot;: &#92;&quot;nominal&#92;&quot;&#92;n    },&#92;n    &#92;&quot;x&#92;&quot;: {&#92;n      &#92;&quot;axis&#92;&quot;: {&#92;n        &#92;&quot;labelAngle&#92;&quot;: 45,&#92;n        &#92;&quot;title&#92;&quot;: null&#92;n      },&#92;n      &#92;&quot;field&#92;&quot;: &#92;&quot;Edad&#92;&quot;,&#92;n      &#92;&quot;scale&#92;&quot;: {&#92;n        &#92;&quot;domain&#92;&quot;: [&#92;n          &#92;&quot;0 a 4 a&#92;&#92;u00f1os     &#92;&quot;,&#92;n          &#92;&quot;5 a 9 a&#92;&#92;u00f1os     &#92;&quot;,&#92;n          &#92;&quot;10 a 15 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;16 a 19 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;20 a 24 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;25 a 29 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;30 a 34 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;35 a 39 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;40 a 44 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;45 a 49 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;50 a 54 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;55 a 59 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;60 a 64 a&#92;&#92;u00f1os   &#92;&quot;,&#92;n          &#92;&quot;65 o m&#92;&#92;u00e1s a&#92;&#92;u00f1os     &#92;&quot;&#92;n        ]&#92;n      },&#92;n      &#92;&quot;type&#92;&quot;: &#92;&quot;nominal&#92;&quot;&#92;n    },&#92;n    &#92;&quot;y&#92;&quot;: {&#92;n      &#92;&quot;axis&#92;&quot;: {&#92;n        &#92;&quot;title&#92;&quot;: null&#92;n      },&#92;n      &#92;&quot;field&#92;&quot;: &#92;&quot;Factor&#92;&quot;,&#92;n      &#92;&quot;type&#92;&quot;: &#92;&quot;quantitative&#92;&quot;&#92;n    }&#92;n  },&#92;n  &#92;&quot;height&#92;&quot;: 200,&#92;n  &#92;&quot;mark&#92;&quot;: {&#92;n    &#92;&quot;type&#92;&quot;: &#92;&quot;bar&#92;&quot;&#92;n  },&#92;n  &#92;&quot;usermeta&#92;&quot;: {&#92;n    &#92;&quot;embedOptions&#92;&quot;: {}&#92;n  },&#92;n  &#92;&quot;width&#92;&quot;: 300&#92;n}&quot;'></marimo-mime-renderer></div><div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-ui-element object-id='Kclp-2' random-id='82457a9d-a8be-bf0e-db00-fc0585e981c0'><marimo-dropdown data-initial-value='[&quot;Formaci&#92;u00f3n&quot;]' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Variable eje horizontal:  &lt;/span&gt;&lt;/span&gt;&quot;' data-options='[&quot;Edad&quot;, &quot;Formaci&#92;u00f3n&quot;, &quot;Situaci&#92;u00f3n&quot;, &quot;Estado_Civil&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element><marimo-ui-element object-id='Kclp-4' random-id='04530f36-4077-53ea-00d3-37d43430b4a7'><marimo-dropdown data-initial-value='[&quot;Sexo&quot;]' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Variable color:  &lt;/span&gt;&lt;/span&gt;&quot;' data-options='[&quot;Sexo&quot;, &quot;Contrato&quot;, &quot;Jornada&quot;, &quot;Nacimiento&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element><marimo-mime-renderer data-mime='&quot;application/vnd.vegalite.v5+json&quot;' data-data='&quot;{&#92;n  &#92;&quot;&#36;schema&#92;&quot;: &#92;&quot;https://vega.github.io/schema/vega-lite/v5.20.1.json&#92;&quot;,&#92;n  &#92;&quot;config&#92;&quot;: {&#92;n    &#92;&quot;view&#92;&quot;: {&#92;n      &#92;&quot;continuousHeight&#92;&quot;: 300,&#92;n      &#92;&quot;continuousWidth&#92;&quot;: 300&#92;n    }&#92;n  },&#92;n  &#92;&quot;data&#92;&quot;: {&#92;n    &#92;&quot;name&#92;&quot;: &#92;&quot;data-2e88901ce454dec8ca2f43e418c12636&#92;&quot;&#92;n  },&#92;n  &#92;&quot;datasets&#92;&quot;: {&#92;n    &#92;&quot;data-2e88901ce454dec8ca2f43e418c12636&#92;&quot;: [&#92;n      {&#92;n        &#92;&quot;Factor&#92;&quot;: 99.16499999999999,&#92;n        &#92;&quot;Formaci&#92;&#92;u00f3n&#92;&quot;: &#92;&quot;ESO&#92;&quot;,&#92;n        &#92;&quot;Sexo&#92;&quot;: &#92;&quot;Hombre&#92;&quot;&#92;n      }&#92;n    ]&#92;n  },&#92;n  &#92;&quot;encoding&#92;&quot;: {&#92;n    &#92;&quot;color&#92;&quot;: {&#92;n      &#92;&quot;field&#92;&quot;: &#92;&quot;Sexo&#92;&quot;,&#92;n      &#92;&quot;legend&#92;&quot;: {&#92;n        &#92;&quot;title&#92;&quot;: null&#92;n      },&#92;n      &#92;&quot;type&#92;&quot;: &#92;&quot;nominal&#92;&quot;&#92;n    },&#92;n    &#92;&quot;x&#92;&quot;: {&#92;n      &#92;&quot;axis&#92;&quot;: {&#92;n        &#92;&quot;labelAngle&#92;&quot;: 45,&#92;n        &#92;&quot;title&#92;&quot;: null&#92;n      },&#92;n      &#92;&quot;field&#92;&quot;: &#92;&quot;Formaci&#92;&#92;u00f3n&#92;&quot;,&#92;n      &#92;&quot;scale&#92;&quot;: {&#92;n        &#92;&quot;domain&#92;&quot;: [&#92;n          &#92;&quot;Analfabetos&#92;&quot;,&#92;n          &#92;&quot;Primaria incompleta&#92;&quot;,&#92;n          &#92;&quot;Primaria&#92;&quot;,&#92;n          &#92;&quot;ESO&#92;&quot;,&#92;n          &#92;&quot;Bachiller&#92;&quot;,&#92;n          &#92;&quot;FP&#92;&quot;,&#92;n          &#92;&quot;Superior&#92;&quot;&#92;n        ]&#92;n      },&#92;n      &#92;&quot;type&#92;&quot;: &#92;&quot;nominal&#92;&quot;&#92;n    },&#92;n    &#92;&quot;y&#92;&quot;: {&#92;n      &#92;&quot;axis&#92;&quot;: {&#92;n        &#92;&quot;title&#92;&quot;: null&#92;n      },&#92;n      &#92;&quot;field&#92;&quot;: &#92;&quot;Factor&#92;&quot;,&#92;n      &#92;&quot;type&#92;&quot;: &#92;&quot;quantitative&#92;&quot;&#92;n    }&#92;n  },&#92;n  &#92;&quot;height&#92;&quot;: 200,&#92;n  &#92;&quot;mark&#92;&quot;: {&#92;n    &#92;&quot;type&#92;&quot;: &#92;&quot;bar&#92;&quot;&#92;n  },&#92;n  &#92;&quot;usermeta&#92;&quot;: {&#92;n    &#92;&quot;embedOptions&#92;&quot;: {}&#92;n  },&#92;n  &#92;&quot;width&#92;&quot;: 300&#92;n}&quot;'></marimo-mime-renderer></div></div>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    }
+  ]
+}

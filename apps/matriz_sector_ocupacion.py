@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.12.6"
+__generated_with = "0.13.6"
 app = marimo.App(width="medium")
 
 
@@ -16,7 +16,7 @@ def _():
     import numpy as np
     import pandas as pd
     import altair as alt
-    return alt, np, pd, pyarrow
+    return alt, np, pd
 
 
 @app.cell
@@ -30,7 +30,7 @@ def _(mo):
     cno2011 = data_path.joinpath("cno.feather")
     referencia_pkl = data_path.joinpath("referencia.pkl")
     matriz =  data_path.joinpath("MIOGAL21_Simetrica.feather")
-    return cnae2009, cno2011, data_path, epa_g_2d, matriz, referencia_pkl
+    return cnae2009, cno2011, epa_g_2d, matriz, referencia_pkl
 
 
 @app.cell
@@ -130,10 +130,11 @@ def _(
             ),
             include_lowest=True,
         ),
-        FORMA=lambda x: x.NFORMA.replace(cned_2d_to_epa),
-        Sector=lambda x: x.ACT.replace(cnae_2d_to_miogal),
-        Ocupación=lambda x:[i[:-1] if i!=None else i for i in x.OCUP ]
+        FORMA=lambda x: x.NFORMA.astype('str').replace(cned_2d_to_epa).astype('category'),
+        Sector=lambda x: x.ACT.astype('str').replace(cnae_2d_to_miogal).astype('category'),
+        Ocupación=lambda x:[i[:-1] if i!=None else i for i in x.OCUP.astype('str')]
     )
+    epa_2d.Ocupación = epa_2d.Ocupación.astype('category')
     return (epa_2d,)
 
 
@@ -158,33 +159,29 @@ def _(epa_2d, np, pd):
                 'AOI=="03"|AOI=="04"'
             )
             .groupby(["Sector", "Ocupación"], observed=True)
-            .FACTOREL.sum().div(4).astype(int)
+            .Factor.sum().div(4).astype(int)
             .reset_index(),
             how="left",
         )
-        .pivot_table(index="Sector", columns="Ocupación", values="FACTOREL")
+        .pivot_table(index="Sector", columns="Ocupación", values="Factor")
     )
     return (eo_matrix,)
 
 
-@app.cell
-def safe_values_row():
-    def safe_values_row(table):
-        try:
-            return table.value[0].row
-        except IndexError:
-            return '01'
-    return (safe_values_row,)
+@app.function
+def safe_values_row(table):
+    try:
+        return table.value[0].row
+    except IndexError:
+        return '01'
 
 
-@app.cell
-def safe_values_column():
-    def safe_values_column(table):
-        try:
-            return table.value[0].column
-        except IndexError:
-            return '1'
-    return (safe_values_column,)
+@app.function
+def safe_values_column(table):
+    try:
+        return table.value[0].column
+    except IndexError:
+        return '1'
 
 
 @app.cell
@@ -208,15 +205,7 @@ def _(eo_matrix, mo):
 
 
 @app.cell
-def _(
-    eo_matrix,
-    epa_2d,
-    np,
-    referencia,
-    safe_values_column,
-    safe_values_row,
-    t1,
-):
+def _(eo_matrix, epa_2d, np, referencia, t1):
     source = (
         epa_2d.groupby(["Sector", "Ocupación"], observed=True)
         .get_group(
@@ -237,7 +226,7 @@ def _(
             ],
             Contrato=lambda x: [
                 referencia.query('Variable=="DUCON1"').Diccionario.values[0][i]
-                if i != None
+                if (i == "1" or i == "6")
                 else np.nan
                 for i in x.DUCON1
             ],
@@ -277,7 +266,7 @@ def _(
 def _(cnae2009, cno2011, pd):
     cnae = pd.read_feather(cnae2009).to_dict()
     cno = pd.read_feather(cno2011).to_dict()
-    return cnae, cno
+    return (cno,)
 
 
 @app.cell
@@ -296,7 +285,7 @@ def _(matriz, pd):
     n2.iloc[63,1] = 'Actividades sanitarias e de servizos sociais'
     n2.iloc[65,1] = 'Actividades artísticas, recreativas e de entretemento'
     n2.iloc[65,0] = '90_93'
-    return n2, nova_fila
+    return (n2,)
 
 
 @app.cell
@@ -306,7 +295,7 @@ def _(n1, n2, pd):
 
 
 @app.cell
-def _(cno, eo_matrix, mo, nomes, safe_values_column, safe_values_row, t1):
+def _(cno, eo_matrix, mo, nomes, t1):
     mo.vstack(
         (
             mo.md('**'+eo_matrix.index[int(safe_values_row(t1))]+': **'+nomes['Descrición rama homoxénea'][eo_matrix.index[int(safe_values_row(t1))]]
@@ -329,7 +318,7 @@ def _(alt, d1, d2, d3, d4, mo, source, x_labels):
                     d3,
                     alt.Chart(
                         source.groupby([d1.value, d3.value])
-                        .FACTOREL.sum()
+                        .Factor.sum()
                         .div(4)
                         .reset_index()
                     )
@@ -338,7 +327,7 @@ def _(alt, d1, d2, d3, d4, mo, source, x_labels):
                         alt.X(d1.value + ":N")
                         .scale(domain=x_labels[d1.value])
                         .axis(title=None, labelAngle=45),
-                        alt.Y("FACTOREL:Q").axis(title=None),
+                        alt.Y("Factor:Q").axis(title=None),
                         alt.Color(d3.value).legend(title=None),
                     )
                     .properties(height=200, width=300),
@@ -350,7 +339,7 @@ def _(alt, d1, d2, d3, d4, mo, source, x_labels):
                     d4,
                     alt.Chart(
                         source.groupby([d2.value, d4.value])
-                        .FACTOREL.sum()
+                        .Factor.sum()
                         .div(4)
                         .reset_index()
                     )
@@ -359,7 +348,7 @@ def _(alt, d1, d2, d3, d4, mo, source, x_labels):
                         alt.X(d2.value + ":N")
                         .scale(domain=x_labels[d2.value])
                         .axis(title=None, labelAngle=45),
-                        alt.Y("FACTOREL:Q").axis(title=None),
+                        alt.Y("Factor:Q").axis(title=None),
                         alt.Color(d4.value).legend(title=None),
                     )
                     .properties(height=200, width=300),
@@ -367,11 +356,6 @@ def _(alt, d1, d2, d3, d4, mo, source, x_labels):
             ),
         ),
     )
-    return
-
-
-@app.cell
-def _():
     return
 
 
