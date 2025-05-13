@@ -12,6 +12,7 @@ def _():
 
 @app.cell
 def _():
+    import openpyxl
     import pandas as pd
     import altair as alt
     import geopandas as gpd
