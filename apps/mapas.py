@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.13.6"
+__generated_with = "0.13.7"
 app = marimo.App(width="medium")
 
 
@@ -15,7 +15,8 @@ def _():
     import pandas as pd
     import altair as alt
     import geopandas as gpd
-    return alt, gpd, pd
+    from pyodide.http import pyfetch
+    return alt, gpd, pd, pyfetch
 
 
 @app.cell
@@ -24,15 +25,22 @@ def _(mo):
             mo.notebook_location() / "public"
         )
 
-    shapefiles = data_path.joinpath("Concellos_IGN.shp")
+    shapefiles = data_path.joinpath("concellos.geojson")
     ratios = data_path.joinpath("ratio.xlsx")
     return ratios, shapefiles
 
 
 @app.cell
-def _(gpd, pd, ratios, shapefiles):
+async def _(pyfetch, shapefiles):
+    res = await pyfetch(shapefiles)
+    data = await res.json()
+    return (data,)
+
+
+@app.cell
+def _(data, gpd, pd, ratios):
     concellos = (
-        gpd.read_file(shapefiles)
+        gpd.GeoDataFrame.from_features(data)
         .filter(["CODIGOINE", "geometry"])
         .merge(
             pd.read_excel(ratios, header=2).assign(
