@@ -288,8 +288,8 @@ def _(eo_matrix, epa_2d, np, referencia, t1):
 
 @app.cell
 def _(cnae2009, cno2011, pd):
-    cnae = pd.read_feather(cnae2009).to_dict()
-    cno = pd.read_feather(cno2011).to_dict()
+    cnae = pd.read_feather(cnae2009).astype('str').set_index('Unnamed: 0').to_dict()
+    cno = pd.read_feather(cno2011).astype('str').apply(lambda x:[i.lstrip('<b>').rstrip('</b>') for i in x]).set_index('Unnamed: 0').to_dict()
     return (cno,)
 
 
@@ -419,7 +419,7 @@ def _(cno, eo_matrix, mo, nomes, t1):
         (
             mo.md('**'+eo_matrix.index[int(safe_values_row(t1))]+': **'+nomes['Descrición'][eo_matrix.index[int(safe_values_row(t1))]]
                 + "<br>"
-                + '**'+safe_values_column(t1)+': **'+cno['Descrición'][int(safe_values_column(t1))]
+                 + '**'+safe_values_column(t1)+': **'+cno['Descrición'][safe_values_column(t1)]
             ),
             t1
         )
