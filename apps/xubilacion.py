@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.12.9"
+__generated_with = "0.13.4"
 app = marimo.App(width="medium")
 
 
@@ -16,7 +16,7 @@ def _():
     import numpy as np
     import pandas as pd
     import altair as alt
-    return alt, np, pd, pyarrow
+    return alt, np, pd
 
 
 @app.cell
@@ -26,18 +26,11 @@ def _(mo):
     )
 
     xubilados_galicia = data_path.joinpath("xubilados_galicia_19a24.feather")
-    cnae2009 = data_path.joinpath("cnae.feather")
-    cno2011 = data_path.joinpath("cno.feather")
+    cnae2009 =  data_path.joinpath("cnae.feather")
+    cno2011 =  data_path.joinpath("cno.feather")
     referencia_pkl = data_path.joinpath("referencia.pkl")
     matriz =  data_path.joinpath("MIOGAL21_Simetrica.feather")
-    return (
-        cnae2009,
-        cno2011,
-        data_path,
-        matriz,
-        referencia_pkl,
-        xubilados_galicia,
-    )
+    return cnae2009, cno2011, matriz, referencia_pkl, xubilados_galicia
 
 
 @app.cell
@@ -47,71 +40,65 @@ def _(pd, referencia_pkl):
 
 
 @app.cell
-def _(cnae_2d_to_miogal, pd, xubilados_galicia):
-    xubilados = pd.read_feather(xubilados_galicia).assign(Sector=lambda x:x.ACTA.replace(cnae_2d_to_miogal), Ocupación=lambda x:[i[:-1] for i in x.OCUPA])
+def _(cnae_2d_to_epa, pd, xubilados_galicia):
+    xubilados = pd.read_feather(xubilados_galicia).assign(Sector=lambda x:x.ACTA.astype('str').replace(cnae_2d_to_epa).astype('category'), Ocupación=lambda x:[i[:-1] for i in x.OCUPA])
     return (xubilados,)
 
 
 @app.cell
 def _():
-    cned_2d_to_epa = {
-        "01": "AN",
-        "02": "P1",
-        "10": "P2",
-        "21": "S1",
-        "22": "S1",
-        "23": "SP",
-        "24": "SP",
-        "32": "SG",
-        "33": "SP",
-        "34": "SP",
-        "35": "SP",
-        "38": "SP",
-        "41": "SP",
-        "51": "SU",
-        "52": "SU",
-        "61": "SU",
-        "62": "SU",
-        "63": "SU",
-        "71": "SU",
-        "72": "SU",
-        "73": "SU",
-        "74": "SU",
-        "75": "SU",
-        "81": "SU",
-    }
-    cnae_2d_to_miogal = {
-        "05": "05_09",
-        "06": "05_09",
+    cnae_2d_to_epa = {
         "07": "05_09",
         "08": "05_09",
         "09": "05_09",
         "11": "11_12",
         "12": "11_12",
-        "14": "14_15",
-        "15": "14_15",
-        "20": "20_21",
-        "21": "20_21",
-        "36": "36_39",
-        "37": "36_39",
-        "38": "36_39",
-        "39": "36_39",
+        "13": "13_15",
+        "14": "13_15",
+        "15": "13_15",
+        "17": "17_22",
+        "19": "17_22",
+        "20": "17_22",
+        "21": "17_22",
+        "22": "17_22",
+        "24": "24_25",
+        "25": "24_25",
+        "26": "26_28",
+        "27": "26_28",
+        "28": "26_28",
+        "35": "35_39",
+        "36": "35_39",
+        "37": "35_39",
+        "38": "35_39",
+        "39": "35_39",
         "41": "41_43",
         "42": "41_43",
         "43": "41_43",
-        "50": "50_51",
-        "51": "50_51",
-        "59": "59_60",
-        "60": "59_60",
-        "62": "62_63",
-        "63": "62_63",
-        "69": "69_70",
-        "70": "69_70",
-        "74": "74_75",
-        "75": "74_75",
-        "80": "80_82",
-        "81": "80_82",
-        "82": "80_82",
+        "49": "49_51",
+        "50": "49_51",
+        "51": "49_51",
+        "58": "58_60",
+        "59": "58_60",
+        "60": "58_60",
+        "61": "61_63",
+        "62": "61_63",
+        "63": "61_63",
+        "64": "64_66",
+        "65": "64_66",
+        "66": "64_66",
+        "69": "69_75",
+        "70": "69_75",
+        "71": "69_75",
+        "72": "69_75",
+        "73": "69_75",
+        "74": "69_75",
+        "75": "69_75",
+        "77": "77_82",
+        "78": "77_82",
+        "79": "77_82",
+        "80": "77_82",
+        "81": "77_82",
+        "82": "77_82",
         "86": "86_88",
         "87": "86_88",
         "88": "86_88",
@@ -119,12 +106,49 @@ def _():
         "91": "90_93",
         "92": "90_93",
         "93": "90_93",
-        "96": "96_99",
-        "97": "96_99",
-        "98": "96_99",
-        "99": "96_99",
+        "94": "94_99",
+        "95": "94_99",
+        "96": "94_99",
+        "97": "94_99",
+        "99": "94_99",
     }
-    edades = {
+    return (cnae_2d_to_epa,)
+
+
+@app.cell
+def _():
+    cned_2d_to_epa = {
+                "01": "AN",
+                "02": "P1",
+                "10": "P2",
+                "21": "S1",
+                "22": "S1",
+                "23": "SP",
+                "24": "SP",
+                "32": "SG",
+                "33": "SP",
+                "34": "SP",
+                "35": "SP",
+                "38": "SP",
+                "41": "SP",
+                "51": "SU",
+                "52": "SU",
+                "61": "SU",
+                "62": "SU",
+                "63": "SU",
+                "71": "SU",
+                "72": "SU",
+                "73": "SU",
+                "74": "SU",
+                "75": "SU",
+                "81": "SU",
+            }
+    return (cned_2d_to_epa,)
+
+
+@app.cell
+def _():
+    edades_xubilacion = {
         50:"55 ou menos",
         51:"55 ou menos",
         53:"55 ou menos",
@@ -137,6 +161,11 @@ def _():
         83:"Máis de 75",
         84:"Máis de 75",
     }
+    return (edades_xubilacion,)
+
+
+@app.cell
+def _():
     ciclo_to_data = {
         186:"1T 2019",
         187:"2T 2019",
@@ -163,14 +192,13 @@ def _():
         208:"3T 2024",
         209:"4T 2024",
     }
-    return ciclo_to_data, cnae_2d_to_miogal, cned_2d_to_epa, edades
+    return (ciclo_to_data,)
 
 
 @app.cell
-def _(cnae2009, cnae_2d_to_miogal, np, pd):
+def _(cnae2009, cnae_2d_to_epa, np, pd):
     sectores = (
         pd.read_feather(cnae2009)
-        .reset_index()
         .astype("str")
         .rename(columns={"Unnamed: 0": "CNAE"})
         .assign(CNAE_2D=lambda x: [i if len(i) == 2 else np.nan for i in x.CNAE])
@@ -178,7 +206,7 @@ def _(cnae2009, cnae_2d_to_miogal, np, pd):
         .reset_index()
         .drop(["index", "Descrición", "CNAE_2D"], axis=1)
         .merge(
-            pd.DataFrame(cnae_2d_to_miogal, index=["Codigo"])
+            pd.DataFrame(cnae_2d_to_epa, index=["Codigo"])
             .T.reset_index()
             .rename(columns={"index": "CNAE"}), how='outer'
         )
@@ -215,79 +243,27 @@ def _(np, pd, sectores, xubilados):
     return (matrix,)
 
 
-@app.cell
-def safe_values_row():
-    def safe_values_row(table):
-        try:
-            return table.value[0].row
-        except IndexError:
-            return '23'
-    return (safe_values_row,)
+@app.function
+def safe_values_row(table):
+    try:
+        return table.value[0].row
+    except IndexError:
+        return '0'
+
+
+@app.function
+def safe_values_column(table):
+    try:
+        return table.value[0].column
+    except IndexError:
+        return '6'
 
 
 @app.cell
-def safe_values_column():
-    def safe_values_column(table):
-        try:
-            return table.value[0].column
-        except IndexError:
-            return '1'
-    return (safe_values_column,)
-
-
-@app.cell
-def _(referencia):
+def _(ciclo_to_data, referencia):
     x_labels = {
-        "Data": [
-            "1T 2019",
-            "2T 2019",
-            "3T 2019",
-            "4T 2019",
-            "1T 2020",
-            "2T 2020",
-            "3T 2020",
-            "4T 2020",
-            "1T 2021",
-            "2T 2021",
-            "3T 2021",
-            "4T 2021",
-            "1T 2022",
-            "2T 2022",
-            "3T 2022",
-            "4T 2022",
-            "1T 2023",
-            "2T 2023",
-            "3T 2023",
-            "4T 2023",
-            "1T 2024",
-            "2T 2024",
-            "3T 2024",
-            "4T 2024",       
-        ],
-        "Idade": [
-            "55 ou menos",
-            56,
-            57,
-            58,
-            59,
-            60,
-            61,
-            62,
-            63,
-            64,
-            65,
-            66,
-            67,
-            68,
-            69,
-            70,
-            71,
-            72,
-            73,
-            74,
-            75,
-            "Máis de 75",
-        ],
+        "Data": [v for k, v in ciclo_to_data.items()],
+        "Idade": ["55 ou menos"] + list(range(56, 76)) + ["Máis de 75"],
         "Formación": [
             "Analfabetos",
             "Primaria incompleta",
@@ -321,12 +297,10 @@ def _(matrix, mo):
 def _(
     ciclo_to_data,
     cned_2d_to_epa,
-    edades,
+    edades_xubilacion,
     matrix,
     np,
     referencia,
-    safe_values_column,
-    safe_values_row,
     t1,
     xubilados,
 ):
@@ -337,7 +311,7 @@ def _(
         )
         .assign(
             Data=lambda x:x.CICLO.astype(int).replace(ciclo_to_data),
-            Idade=lambda x: x.EDAD1.astype(int).replace(edades),
+            Idade=lambda x: x.EDAD1.astype(int).replace(edades_xubilacion),
             Sexo=lambda x: [
                 referencia.query('Variable=="SEXO1"').Diccionario.values[0][i]
                 for i in x.SEXO1
@@ -360,7 +334,7 @@ def _(
                     "SP": "FP",
                     "SU": "Superior",
                 }[i]
-                for i in x.NFORMA.replace(cned_2d_to_epa)
+                for i in x.NFORMA.astype('str').replace(cned_2d_to_epa).astype('category')
             ],
             Estado_Civil=lambda x: [
                 referencia.query('Variable=="ECIV1"').Diccionario.values[0][i]
@@ -376,63 +350,143 @@ def _(
 
 @app.cell
 def _(cnae2009, cno2011, pd):
-    cnae = pd.read_feather(cnae2009).reset_index().astype('str').set_index('Unnamed: 0').to_dict()
-    cno = pd.read_feather(cno2011).reset_index().astype('str').apply(lambda x:[i.lstrip('<b>').rstrip('</b>') for i in x]).set_index('Unnamed: 0').to_dict()
-    return cnae, cno
+    cnae = pd.read_feather(cnae2009).astype('str').set_index('Unnamed: 0').to_dict()
+    cno = pd.read_feather(cno2011).astype('str').apply(lambda x:[i.lstrip('<b>').rstrip('</b>') for i in x]).set_index('Unnamed: 0').to_dict()
+    return (cno,)
 
 
 @app.cell
 def _(cnae2009, pd):
-    n1 = pd.read_feather(cnae2009).reset_index().astype('str').rename(columns={'Unnamed: 0':'Código', 'Descrición':'Descrición rama homoxénea'}).query("Código=='03'|Código=='10'")
-    return (n1,)
+    n1 = (
+        pd.read_feather(cnae2009)
+        .astype("str")
+        .rename(columns={"Unnamed: 0": "Código"})
+        .query("Código=='03'|Código=='10'")
+    )
+    novas = pd.DataFrame(
+        {
+            0: {
+                "Código": "13_15",
+                "Descrición": "Téxtil, confección, coiro e calzado",
+            },
+            1: {"Código": "17_22", "Descrición": "Industrias químicas"},
+            2: {
+                "Código": "24_25",
+                "Descrición": "Metalurxia e produtos metálicos",
+            },
+            3: {
+                "Código": "26_28",
+                "Descrición": "Maquinaria, equipamento produtos eléctricos e electrónicos",
+            },
+            4: {"Código": "35_39", "Descrición": "Enerxía, auga e saneamento"},
+            5: {"Código": "64_66", "Descrición": "Actividades financeiras e de seguros"},
+            6: {"Código": "49_51", "Descrición": "Transporte"},
+            7: {
+                "Código": "58_60",
+                "Descrición": "Actividades cinematográficas de video e televisión, gravación de son e edición",
+            },
+            8: {
+                "Código": "69_75",
+                "Descrición": "Actividades profesionais, científicas e técnicas",
+            },
+            9: {
+                "Código": "61_63",
+                "Descrición": "Telecomunicacións e informática",
+            },
+            10: {
+                "Código": "77_82",
+                "Descrición": "Actividades administrativas e servizos auxiliares",
+            },
+        }
+    ).T
+    return n1, novas
 
 
 @app.cell
 def _(matriz, pd):
-    nova_fila=pd.DataFrame([{'Código':'96_99', 'Descrición rama homoxénea':'Outros servizos'}])
-    n2 = pd.concat([pd.read_feather(matriz), nova_fila], ignore_index=True)
+    nova_fila=pd.DataFrame([{'Código':'94_99', 'Descrición rama homoxénea':'Outros servizos'}])
+    n2 = pd.concat([pd.read_feather(matriz), nova_fila], ignore_index=True).rename(columns={'Descrición rama homoxénea':'Descrición'})
     n2['Código'] = n2['Código'].str.lstrip('R').str.rstrip('M')
     n2.iloc[31,1] = 'Suministro de auga, actividades de saneamento, xestión de residuos e descontaminación'
     n2.iloc[61,1] = 'Educación'
     n2.iloc[63,1] = 'Actividades sanitarias e de servizos sociais'
     n2.iloc[65,1] = 'Actividades artísticas, recreativas e de entretemento'
     n2.iloc[65,0] = '90_93'
-    return n2, nova_fila
+    return (n2,)
 
 
 @app.cell
-def _(n1, n2, pd):
-    nomes = pd.concat([n1,n2], ignore_index=True).set_index('Código').drop(['03A','03B','10A','10B','10C','10D','10E','37_38N','85N','86_88N','93','96','97']).to_dict()
+def _(n1, n2, novas, pd):
+    nomes = (
+        pd.concat([n1, novas, n2], ignore_index=True)
+        .set_index("Código")
+        .drop(
+            [
+                "03A",
+                "03B",
+                "10A",
+                "10B",
+                "10C",
+                "10D",
+                "10E",
+                "37_38N",
+                "85N",
+                "86_88N",
+                "93",
+                "96",
+                "97",
+                "13",
+                "14_15",
+                "17",
+                "18",
+                "19",
+                "20_21",
+                "22",
+                "24",
+                "25",
+                "26",
+                "27",
+                "28",
+                "35",
+                "36_39",
+                "49",
+                "50_51",
+                "58",
+                "59_60",
+                "61",
+                "64",
+                "65",
+                "66",
+                "69_70",
+                "71",
+                "72",
+                "73",
+                "74_75",
+                "77",
+                "78",
+                "79",
+                "80_82",
+                "94",
+                "95",
+            ]
+        )
+        .to_dict()
+    )
     return (nomes,)
 
 
 @app.cell
-def _(
-    alt,
-    cno,
-    d1,
-    d2,
-    d3,
-    d4,
-    matrix,
-    mo,
-    nomes,
-    safe_values_column,
-    safe_values_row,
-    source,
-    t1,
-    x_labels,
-):
-    mo.hstack((mo.vstack(
+def _(alt, cno, d1, d2, d3, d4, matrix, mo, nomes, source, t1, x_labels):
+    mo.vstack((mo.vstack(
         (
-            mo.md('**'+matrix.index[int(safe_values_row(t1))]+': **'+nomes['Descrición rama homoxénea'][matrix.index[int(safe_values_row(t1))]]
+            mo.md('**'+matrix.index[int(safe_values_row(t1))]+': **'+nomes['Descrición'][matrix.index[int(safe_values_row(t1))]]
                 + "<br>"
                 + '**'+safe_values_column(t1)+': **'+cno['Descrición'][safe_values_column(t1)]
             ),
             t1
         )
     ),
-               mo.vstack(
+               mo.hstack(
         (
             mo.vstack(
                 (
