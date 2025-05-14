@@ -1,7 +1,16 @@
 import marimo
 
-__generated_with = "0.13.7"
+__generated_with = "0.13.8"
 app = marimo.App(width="medium")
+
+
+@app.cell
+def _():
+    # /// script
+    # [tool.marimo.runtime]
+    # output_max_bytes = 30_000_000
+    # ///
+    return
 
 
 @app.cell
