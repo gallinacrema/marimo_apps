@@ -8,7 +8,7 @@ app = marimo.App(width="medium")
 def _():
     # /// script
     # [tool.marimo.runtime]
-    # output_max_bytes = 30_000_000
+    # output_max_bytes = 35_000_000
     # ///
     return
 
