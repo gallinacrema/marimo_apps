@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.13.4"
+__generated_with = "0.13.10"
 app = marimo.App(width="medium")
 
 
@@ -411,6 +411,21 @@ def _(n1, n2, novas, pd):
         .to_dict()
     )
     return (nomes,)
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+    ## Matriz Sector-Ocupación dos traballadores ocupados en Galicia en 2024
+    A matriz amosa o número de traballadores ocupados en Galicia por sector (en filas) e ocupación (en columnas), a partir dos datos da *Encuesta de Población Activa* (EPA).
+
+    Os códigos dos sectores correspóndense coa *Clasificación Nacional de Actividades Económicas* 2009 (CNAE-09), ao nivel de dous díxitos. Os códigos das ocupacións correspóndense coa *Clasificación Nacional de Ocupaciones* 2011 (CNO-11), ao nivel de un díxito.
+
+    Facendo *click* co cursor nunha das celas das matriz que conteña un valor, é posible seleccionar nos menús situados embaixo a desagregación dese valor seguindo diferentes criterios.
+    """
+    )
+    return
 
 
 @app.cell
