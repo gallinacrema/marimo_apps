@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.13.10"
+__generated_with = "0.13.11"
 app = marimo.App(width="medium")
 
 
@@ -25,9 +25,9 @@ def _(mo):
         mo.notebook_location() / "public"
     )
 
-    epa_g_2d = data_path.joinpath("epa_galicia_2024_2d.feather")
-    cnae2009 = data_path.joinpath("cnae.feather")
-    cno2011 = data_path.joinpath("cno.feather")
+    epa_g_2d = data_path.joinpath("ocupados_galicia_2024_2d.feather")
+    cnae2009 = data_path.joinpath("cnae2009.feather")
+    cno2011 = data_path.joinpath("cno2011.feather")
     referencia_pkl = data_path.joinpath("referencia.pkl")
     matriz =  data_path.joinpath("MIOGAL21_Simetrica.feather")
     return cnae2009, cno2011, epa_g_2d, matriz, referencia_pkl
@@ -62,7 +62,14 @@ def _():
                 "75": "SU",
                 "81": "SU",
             }
+    return age_continuous_to_epa_5y_bins, cned_2d_to_epa
+
+
+@app.cell
+def _():
     cnae_2d_to_epa = {
+        "05": "05_09",
+        "06": "05_09",
         "07": "05_09",
         "08": "05_09",
         "09": "05_09",
@@ -72,6 +79,7 @@ def _():
         "14": "13_15",
         "15": "13_15",
         "17": "17_22",
+        "18": "17_22",
         "19": "17_22",
         "20": "17_22",
         "21": "17_22",
@@ -127,7 +135,7 @@ def _():
         "97": "94_99",
         "99": "94_99",
     }
-    return age_continuous_to_epa_5y_bins, cnae_2d_to_epa, cned_2d_to_epa
+    return (cnae_2d_to_epa,)
 
 
 @app.cell
@@ -168,21 +176,14 @@ def _(epa_2d, np, pd):
         pd.DataFrame(
             np.array(
                 np.meshgrid(
-                    epa_2d.query(
-                        'AOI=="03"|AOI=="04"'
-                    ).Sector.unique(),
-                    epa_2d.query(
-                        'AOI=="03"|AOI=="04"'
-                    ).Ocupación.unique(),
+                    epa_2d.Sector.unique(),
+                    epa_2d.Ocupación.unique(),
                 )
             ).T.reshape(-1, 2),
             columns=["Sector", "Ocupación"],
         )
         .merge(
-            epa_2d.query(
-                'AOI=="03"|AOI=="04"'
-            )
-            .groupby(["Sector", "Ocupación"], observed=True)
+            epa_2d.groupby(["Sector", "Ocupación"], observed=True)
             .Factor.sum().div(4).astype(int)
             .reset_index(),
             how="left",
@@ -210,7 +211,7 @@ def safe_values_column(table):
 
 @app.cell
 def _(referencia):
-    x_labels = {'Edad': list(referencia.query('Variable=="EDAD1"').Diccionario.values[0].values()),
+    x_labels = {'Idade': list(referencia.query('Variable=="EDAD1"').Diccionario.values[0].values()),
                 'Formación': ["Analfabetos", "Primaria incompleta", "Primaria", "ESO", "Bachiller", "FP", "Superior"],
                 'Situación': list(referencia.query('Variable=="SITU"').Diccionario.values[0].values()),
                 'Estado_Civil': list(referencia.query('Variable=="ECIV1"').Diccionario.values[0].values())
@@ -221,10 +222,10 @@ def _(referencia):
 @app.cell
 def _(eo_matrix, mo):
     t1 = mo.ui.table(eo_matrix, selection='single-cell', show_column_summaries=False, pagination=False)
-    d1 = mo.ui.dropdown(['Edad','Formación','Situación','Estado_Civil'], value='Edad', label='Variable eje horizontal:  ')
-    d2 = mo.ui.dropdown(['Edad','Formación','Situación','Estado_Civil'], value='Formación', label='Variable eje horizontal:  ')
-    d3 = mo.ui.dropdown(['Sexo','Contrato','Jornada','Nacimiento'], value='Sexo', label='Variable color:  ')
-    d4 = mo.ui.dropdown(['Sexo','Contrato','Jornada','Nacimiento'], value='Sexo', label='Variable color:  ')
+    d1 = mo.ui.dropdown(['Idade','Formación','Situación','Estado_Civil'], value='Idade', label='Variable eixo horizontal:  ')
+    d2 = mo.ui.dropdown(['Idade','Formación','Situación','Estado_Civil'], value='Formación', label='Variable eixo horizontal:  ')
+    d3 = mo.ui.dropdown(['Sexo','Contrato','Jornada','Nacemento'], value='Sexo', label='Variable color:  ')
+    d4 = mo.ui.dropdown(['Sexo','Contrato','Jornada','Nacemento'], value='Sexo', label='Variable color:  ')
     return d1, d2, d3, d4, t1
 
 
@@ -236,7 +237,7 @@ def _(eo_matrix, epa_2d, np, referencia, t1):
             (eo_matrix.index[int(safe_values_row(t1))], safe_values_column(t1))
         )
         .assign(
-            Edad=lambda x: [
+            Idade=lambda x: [
                 referencia.query('Variable=="EDAD1"').Diccionario.values[0][i]
                 for i in x.EDAD
             ],
@@ -254,7 +255,7 @@ def _(eo_matrix, epa_2d, np, referencia, t1):
                 else np.nan
                 for i in x.DUCON1
             ],
-            Jornada=lambda x: [
+            Xornada=lambda x: [
                 referencia.query('Variable=="PARCO1"').Diccionario.values[0][
                     int(i)
                 ]
@@ -278,8 +279,8 @@ def _(eo_matrix, epa_2d, np, referencia, t1):
                 referencia.query('Variable=="ECIV1"').Diccionario.values[0][i]
                 for i in x.ECIV1
             ],
-            Nacimiento=lambda x: np.where(
-                x.PAINA1.isnull(), "España", "Extranjero"
+            Nacemento=lambda x: np.where(
+                x.PAINA1.isnull(), "España", "Estranxeiro"
             ),
         )
     )
