@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.13.4"
+__generated_with = "0.13.11"
 app = marimo.App(width="medium")
 
 
@@ -26,8 +26,8 @@ def _(mo):
     )
 
     xubilados_galicia = data_path.joinpath("xubilados_galicia_19a24.feather")
-    cnae2009 =  data_path.joinpath("cnae.feather")
-    cno2011 =  data_path.joinpath("cno.feather")
+    cnae2009 =  data_path.joinpath("cnae2009.feather")
+    cno2011 =  data_path.joinpath("cno2011.feather")
     referencia_pkl = data_path.joinpath("referencia.pkl")
     matriz =  data_path.joinpath("MIOGAL21_Simetrica.feather")
     return cnae2009, cno2011, matriz, referencia_pkl, xubilados_galicia
@@ -40,14 +40,10 @@ def _(pd, referencia_pkl):
 
 
 @app.cell
-def _(cnae_2d_to_epa, pd, xubilados_galicia):
-    xubilados = pd.read_feather(xubilados_galicia).assign(Sector=lambda x:x.ACTA.astype('str').replace(cnae_2d_to_epa).astype('category'), Ocupación=lambda x:[i[:-1] for i in x.OCUPA])
-    return (xubilados,)
-
-
-@app.cell
 def _():
     cnae_2d_to_epa = {
+        "05": "05_09",
+        "06": "05_09",
         "07": "05_09",
         "08": "05_09",
         "09": "05_09",
@@ -57,6 +53,7 @@ def _():
         "14": "13_15",
         "15": "13_15",
         "17": "17_22",
+        "18": "17_22",
         "19": "17_22",
         "20": "17_22",
         "21": "17_22",
@@ -192,7 +189,44 @@ def _():
         208:"3T 2024",
         209:"4T 2024",
     }
-    return (ciclo_to_data,)
+    return
+
+
+@app.cell
+def _():
+    ciclo_to_años = {
+        186:"2019",
+        187:"2019",
+        188:"2019",
+        189:"2019",
+        190:"2020",
+        191:"2020",
+        192:"2020",
+        193:"2020",
+        194:"2021",
+        195:"2021",
+        196:"2021",
+        197:"2021",
+        198:"2022",
+        199:"2022",
+        200:"2022",
+        201:"2022",
+        202:"2023",
+        203:"2023",
+        204:"2023",
+        205:"2023",
+        206:"2024",
+        207:"2024",
+        208:"2024",
+        209:"2024",
+    }
+    return (ciclo_to_años,)
+
+
+@app.cell
+def _(cnae_2d_to_epa, pd, xubilados_galicia):
+    xubilados = pd.read_feather(xubilados_galicia).assign(Sector=lambda x:x.ACTA.astype('str').replace(cnae_2d_to_epa).astype('category'), Ocupación=lambda x:[i[:-1] for i in x.OCUPA])
+    return (xubilados,)
 
 
 @app.cell
@@ -260,9 +294,9 @@ def safe_values_column(table):
 
 
 @app.cell
-def _(ciclo_to_data, referencia):
+def _(ciclo_to_años, referencia):
     x_labels = {
-        "Data": [v for k, v in ciclo_to_data.items()],
+        "Data": [v for k, v in ciclo_to_años.items()],
         "Idade": ["55 ou menos"] + list(range(56, 76)) + ["Máis de 75"],
         "Formación": [
             "Analfabetos",
@@ -286,8 +320,8 @@ def _(ciclo_to_data, referencia):
 @app.cell
 def _(matrix, mo):
     t1 = mo.ui.table(matrix, selection='single-cell', show_column_summaries=False, pagination=False)
-    d1 = mo.ui.dropdown(['Data','Idade','Formación','Situación','Estado_Civil'], value='Data', label='Variable eje horizontal:  ')
-    d2 = mo.ui.dropdown(['Data','Idade','Formación','Situación','Estado_Civil'], value='Idade', label='Variable eje horizontal:  ')
+    d1 = mo.ui.dropdown(['Data','Idade','Formación','Situación','Estado_Civil'], value='Data', label='Variable eixo horizontal:  ')
+    d2 = mo.ui.dropdown(['Data','Idade','Formación','Situación','Estado_Civil'], value='Idade', label='Variable eixo horizontal:  ')
     d3 = mo.ui.dropdown(['Sexo','Nacemento'], value='Sexo', label='Variable color:  ')
     d4 = mo.ui.dropdown(['Sexo','Nacemento'], value='Nacemento', label='Variable color:  ')
     return d1, d2, d3, d4, t1
@@ -295,7 +329,7 @@ def _(matrix, mo):
 
 @app.cell
 def _(
-    ciclo_to_data,
+    ciclo_to_años,
     cned_2d_to_epa,
     edades_xubilacion,
     matrix,
@@ -310,7 +344,7 @@ def _(
             (matrix.index[int(safe_values_row(t1))], safe_values_column(t1))
         )
         .assign(
-            Data=lambda x:x.CICLO.astype(int).replace(ciclo_to_data),
+            Data=lambda x:x.CICLO.astype(int).replace(ciclo_to_años),
             Idade=lambda x: x.EDAD1.astype(int).replace(edades_xubilacion),
             Sexo=lambda x: [
                 referencia.query('Variable=="SEXO1"').Diccionario.values[0][i]
@@ -350,8 +384,8 @@ def _(
 
 @app.cell
 def _(cnae2009, cno2011, pd):
-    cnae = pd.read_feather(cnae2009).astype('str').set_index('Unnamed: 0').to_dict()
-    cno = pd.read_feather(cno2011).astype('str').apply(lambda x:[i.lstrip('<b>').rstrip('</b>') for i in x]).set_index('Unnamed: 0').to_dict()
+    cnae = pd.read_feather(cnae2009).astype('str').to_dict()
+    cno = pd.read_feather(cno2011).astype('str').apply(lambda x:[i.lstrip('<b>').rstrip('</b>') for i in x]).to_dict()
     return (cno,)
 
 
@@ -476,12 +510,27 @@ def _(n1, n2, novas, pd):
 
 
 @app.cell
+def _(mo):
+    mo.md(
+        r"""
+    ## Traballadores ocupados que se xubilaron en Galicia (2019-2024)
+    A táboa amosa o número de traballadores ocupados en Galicia que se xubilaron no período 2019-2024, divididos por sector (en filas) e ocupación (en columnas), a partir dos datos da *Encuesta de Población Activa* (EPA).
+
+    Os códigos dos sectores correspóndense coa *Clasificación Nacional de Actividades Económicas* 2009 (CNAE-09), ao nivel de dous díxitos, agregados dun xeito compatible coa clasificación sectorial do Marco Input-Output de Galicia 2021 (MIOGAL-21). Os códigos das ocupacións correspóndense coa *Clasificación Nacional de Ocupaciones* 2011 (CNO-11), ao nivel de un díxito.
+
+    Facendo *click* co cursor nunha das celas da táboa que non están baleiras, os menús situados baixo a matriz permiten desagregar o valor correspondente segundo diversos criterios.
+    """
+    )
+    return
+
+
+@app.cell
 def _(alt, cno, d1, d2, d3, d4, matrix, mo, nomes, source, t1, x_labels):
     mo.vstack((mo.vstack(
         (
             mo.md('**'+matrix.index[int(safe_values_row(t1))]+': **'+nomes['Descrición'][matrix.index[int(safe_values_row(t1))]]
                 + "<br>"
-                + '**'+safe_values_column(t1)+': **'+cno['Descrición'][safe_values_column(t1)]
+                + '**'+safe_values_column(t1)+': **'+cno['Descrición'][int(safe_values_column(t1))]
             ),
             t1
         )

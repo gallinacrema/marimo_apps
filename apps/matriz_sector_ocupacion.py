@@ -225,7 +225,7 @@ def _(eo_matrix, mo):
     d1 = mo.ui.dropdown(['Idade','Formación','Situación','Estado_Civil'], value='Idade', label='Variable eixo horizontal:  ')
     d2 = mo.ui.dropdown(['Idade','Formación','Situación','Estado_Civil'], value='Formación', label='Variable eixo horizontal:  ')
     d3 = mo.ui.dropdown(['Sexo','Contrato','Jornada','Nacemento'], value='Sexo', label='Variable color:  ')
-    d4 = mo.ui.dropdown(['Sexo','Contrato','Jornada','Nacemento'], value='Sexo', label='Variable color:  ')
+    d4 = mo.ui.dropdown(['Sexo','Contrato','Jornada','Nacemento'], value='Nacemento', label='Variable color:  ')
     return d1, d2, d3, d4, t1
 
 
@@ -419,11 +419,11 @@ def _(mo):
     mo.md(
         r"""
     ## Matriz Sector-Ocupación dos traballadores ocupados en Galicia en 2024
-    A matriz amosa o número de traballadores ocupados en Galicia por sector (en filas) e ocupación (en columnas), a partir dos datos da *Encuesta de Población Activa* (EPA).
+    A matriz amosa o número de traballadores ocupados en Galicia en promedio durante o ano 2024, divididos por sector (en filas) e ocupación (en columnas), a partir dos datos da *Encuesta de Población Activa* (EPA).
 
-    Os códigos dos sectores correspóndense coa *Clasificación Nacional de Actividades Económicas* 2009 (CNAE-09), ao nivel de dous díxitos. Os códigos das ocupacións correspóndense coa *Clasificación Nacional de Ocupaciones* 2011 (CNO-11), ao nivel de un díxito.
+    Os códigos dos sectores correspóndense coa *Clasificación Nacional de Actividades Económicas* 2009 (CNAE-09), ao nivel de dous díxitos, agregados dun xeito compatible coa clasificación sectorial do Marco Input-Output de Galicia 2021 (MIOGAL-21). Os códigos das ocupacións correspóndense coa *Clasificación Nacional de Ocupaciones* 2011 (CNO-11), ao nivel de un díxito.
 
-    Facendo *click* co cursor nunha das celas das matriz que conteña un valor, é posible seleccionar nos menús situados embaixo a desagregación dese valor seguindo diferentes criterios.
+    Facendo *click* co cursor nunha das celas da matriz que non están baleiras, os menús situados baixo a matriz permiten desagregar o valor correspondente segundo diversos criterios.
     """
     )
     return
