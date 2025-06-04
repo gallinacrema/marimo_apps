@@ -28,120 +28,28 @@ def _(mo):
     epa_g_2d = data_path.joinpath("ocupados_galicia_2024_2d.feather")
     cnae2009 = data_path.joinpath("cnae2009.feather")
     cno2011 = data_path.joinpath("cno2011.feather")
+    cnae =  data_path.joinpath("cnae_2d_to_epa.feather")
+    cned =  data_path.joinpath("cned_2d_to_epa.feather")
     referencia_pkl = data_path.joinpath("referencia.pkl")
     matriz =  data_path.joinpath("MIOGAL21_Simetrica.feather")
-    return cnae2009, cno2011, epa_g_2d, matriz, referencia_pkl
+    nomes_epa = data_path.joinpath("nomes_epa.feather")
+    return cnae, cned, cno2011, epa_g_2d, nomes_epa, referencia_pkl
 
 
 @app.cell
 def _():
     age_continuous_to_epa_5y_bins = [0, 4, 9, 14, 19, 24, 29, 34, 39, 44, 49, 54, 59, 64, 109]
-    cned_2d_to_epa = {
-                "01": "AN",
-                "02": "P1",
-                "10": "P2",
-                "21": "S1",
-                "22": "S1",
-                "23": "SP",
-                "24": "SP",
-                "32": "SG",
-                "33": "SP",
-                "34": "SP",
-                "35": "SP",
-                "38": "SP",
-                "41": "SP",
-                "51": "SU",
-                "52": "SU",
-                "61": "SU",
-                "62": "SU",
-                "63": "SU",
-                "71": "SU",
-                "72": "SU",
-                "73": "SU",
-                "74": "SU",
-                "75": "SU",
-                "81": "SU",
-            }
-    return age_continuous_to_epa_5y_bins, cned_2d_to_epa
+    return (age_continuous_to_epa_5y_bins,)
 
 
 @app.cell
-def _():
-    cnae_2d_to_epa = {
-        "05": "05_09",
-        "06": "05_09",
-        "07": "05_09",
-        "08": "05_09",
-        "09": "05_09",
-        "11": "11_12",
-        "12": "11_12",
-        "13": "13_15",
-        "14": "13_15",
-        "15": "13_15",
-        "17": "17_22",
-        "18": "17_22",
-        "19": "17_22",
-        "20": "17_22",
-        "21": "17_22",
-        "22": "17_22",
-        "24": "24_25",
-        "25": "24_25",
-        "26": "26_28",
-        "27": "26_28",
-        "28": "26_28",
-        "35": "35_39",
-        "36": "35_39",
-        "37": "35_39",
-        "38": "35_39",
-        "39": "35_39",
-        "41": "41_43",
-        "42": "41_43",
-        "43": "41_43",
-        "49": "49_51",
-        "50": "49_51",
-        "51": "49_51",
-        "58": "58_60",
-        "59": "58_60",
-        "60": "58_60",
-        "61": "61_63",
-        "62": "61_63",
-        "63": "61_63",
-        "64": "64_66",
-        "65": "64_66",
-        "66": "64_66",
-        "69": "69_75",
-        "70": "69_75",
-        "71": "69_75",
-        "72": "69_75",
-        "73": "69_75",
-        "74": "69_75",
-        "75": "69_75",
-        "77": "77_82",
-        "78": "77_82",
-        "79": "77_82",
-        "80": "77_82",
-        "81": "77_82",
-        "82": "77_82",
-        "86": "86_88",
-        "87": "86_88",
-        "88": "86_88",
-        "90": "90_93",
-        "91": "90_93",
-        "92": "90_93",
-        "93": "90_93",
-        "94": "94_99",
-        "95": "94_99",
-        "96": "94_99",
-        "97": "94_99",
-        "99": "94_99",
-    }
-    return (cnae_2d_to_epa,)
-
-
-@app.cell
-def _(pd, referencia_pkl):
+def _(cnae, cned, cno2011, nomes_epa, pd, referencia_pkl):
+    cnae_2d_to_epa = pd.read_feather(cnae).to_dict()['Nuevo_codigo']
+    cned_2d_to_epa = pd.read_feather(cned).to_dict()['Nuevo_codigo']
+    cno = pd.read_feather(cno2011).astype('str').apply(lambda x:[i.lstrip('<b>').rstrip('</b>') for i in x])
+    nomes = pd.read_feather(nomes_epa).set_index('Código').to_dict()
     referencia = pd.read_pickle(referencia_pkl)
-    return (referencia,)
+    return cnae_2d_to_epa, cned_2d_to_epa, cno, nomes, referencia
 
 
 @app.cell
@@ -287,134 +195,7 @@ def _(eo_matrix, epa_2d, np, referencia, t1):
     return (source,)
 
 
-@app.cell
-def _(cnae2009, cno2011, pd):
-    cnae = pd.read_feather(cnae2009).astype('str').set_index('Unnamed: 0').to_dict()
-    cno = pd.read_feather(cno2011).astype('str').apply(lambda x:[i.lstrip('<b>').rstrip('</b>') for i in x]).set_index('Unnamed: 0').to_dict()
-    return (cno,)
-
-
-@app.cell
-def _(cnae2009, pd):
-    n1 = (
-        pd.read_feather(cnae2009)
-        .astype("str")
-        .rename(columns={"Unnamed: 0": "Código"})
-        .query("Código=='03'|Código=='10'")
-    )
-    novas = pd.DataFrame(
-        {
-            0: {
-                "Código": "13_15",
-                "Descrición": "Téxtil, confección, coiro e calzado",
-            },
-            1: {"Código": "17_22", "Descrición": "Industrias químicas"},
-            2: {
-                "Código": "24_25",
-                "Descrición": "Metalurxia e produtos metálicos",
-            },
-            3: {
-                "Código": "26_28",
-                "Descrición": "Maquinaria, equipamento produtos eléctricos e electrónicos",
-            },
-            4: {"Código": "35_39", "Descrición": "Enerxía, auga e saneamento"},
-            5: {"Código": "64_66", "Descrición": "Actividades financeiras e de seguros"},
-            6: {"Código": "49_51", "Descrición": "Transporte"},
-            7: {
-                "Código": "58_60",
-                "Descrición": "Actividades cinematográficas de video e televisión, gravación de son e edición",
-            },
-            8: {
-                "Código": "69_75",
-                "Descrición": "Actividades profesionais, científicas e técnicas",
-            },
-            9: {
-                "Código": "61_63",
-                "Descrición": "Telecomunicacións e informática",
-            },
-            10: {
-                "Código": "77_82",
-                "Descrición": "Actividades administrativas e servizos auxiliares",
-            },
-        }
-    ).T
-    return n1, novas
-
-
-@app.cell
-def _(matriz, pd):
-    nova_fila=pd.DataFrame([{'Código':'94_99', 'Descrición rama homoxénea':'Outros servizos'}])
-    n2 = pd.concat([pd.read_feather(matriz), nova_fila], ignore_index=True).rename(columns={'Descrición rama homoxénea':'Descrición'})
-    n2['Código'] = n2['Código'].str.lstrip('R').str.rstrip('M')
-    n2.iloc[31,1] = 'Suministro de auga, actividades de saneamento, xestión de residuos e descontaminación'
-    n2.iloc[61,1] = 'Educación'
-    n2.iloc[63,1] = 'Actividades sanitarias e de servizos sociais'
-    n2.iloc[65,1] = 'Actividades artísticas, recreativas e de entretemento'
-    n2.iloc[65,0] = '90_93'
-    return (n2,)
-
-
-@app.cell
-def _(n1, n2, novas, pd):
-    nomes = (
-        pd.concat([n1, novas, n2], ignore_index=True)
-        .set_index("Código")
-        .drop(
-            [
-                "03A",
-                "03B",
-                "10A",
-                "10B",
-                "10C",
-                "10D",
-                "10E",
-                "37_38N",
-                "85N",
-                "86_88N",
-                "93",
-                "96",
-                "97",
-                "13",
-                "14_15",
-                "17",
-                "18",
-                "19",
-                "20_21",
-                "22",
-                "24",
-                "25",
-                "26",
-                "27",
-                "28",
-                "35",
-                "36_39",
-                "49",
-                "50_51",
-                "58",
-                "59_60",
-                "61",
-                "64",
-                "65",
-                "66",
-                "69_70",
-                "71",
-                "72",
-                "73",
-                "74_75",
-                "77",
-                "78",
-                "79",
-                "80_82",
-                "94",
-                "95",
-            ]
-        )
-        .to_dict()
-    )
-    return (nomes,)
-
-
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(
         r"""
@@ -435,7 +216,7 @@ def _(cno, eo_matrix, mo, nomes, t1):
         (
             mo.md('**'+eo_matrix.index[int(safe_values_row(t1))]+': **'+nomes['Descrición'][eo_matrix.index[int(safe_values_row(t1))]]
                 + "<br>"
-                 + '**'+safe_values_column(t1)+': **'+cno['Descrición'][safe_values_column(t1)]
+                 + '**'+safe_values_column(t1)+': **'+cno['Descrición'][int(safe_values_column(t1))]
             ),
             t1
         )
