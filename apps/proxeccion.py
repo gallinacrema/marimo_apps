@@ -25,7 +25,7 @@ def _(mo):
         mo.notebook_location() / "public"
     )
 
-    maiores = data_path.joinpath("mayores_galicia_2d_19a24.feather")
+    filtrados = data_path.joinpath("filtrados_galicia_2d_19a24.feather")
     proxeccions_galicia = data_path.joinpath("proxeccions.feather")
     cnae2009 =  data_path.joinpath("cnae2009.feather")
     cno2011 =  data_path.joinpath("cno2011.feather")
@@ -36,7 +36,7 @@ def _(mo):
     return (
         cnae,
         cno2011,
-        maiores,
+        filtrados,
         nomes_epa,
         proxeccions_galicia,
         referencia_pkl,
@@ -53,8 +53,8 @@ def _(cnae, cno2011, nomes_epa, pd, referencia_pkl):
 
 
 @app.cell
-def _(maiores, pd):
-    base = pd.read_feather(maiores).reset_index().drop(['index','CCAA'], axis=1).reset_index().rename(columns={'index':'ID'})
+def _(filtrados, pd):
+    base = pd.read_feather(filtrados).reset_index().rename(columns={'index':'ID'})
     return (base,)
 
 
@@ -81,7 +81,8 @@ def _(base, cnae_2d_to_epa, np, xubilados):
 @app.cell
 def _(df):
     df_maiores = (
-        df.groupby(["CICLO", "Sector", "Ocupacion", "EDAD1", "XUBIL"])
+        df.query('EDAD1>50&Sector!="nan"')
+        .groupby(["CICLO", "Sector", "Ocupacion", "EDAD1", "XUBIL"])
         .Factor.sum()
         .round()
         .reset_index()
@@ -116,7 +117,8 @@ def _(df):
 @app.cell
 def _(xubilados_24):
     xub24_idade = (
-        xubilados_24.groupby(["Sector", "Ocupacion", "EDAD1"])
+        xubilados_24.query("EDAD1>50")
+        .groupby(["Sector", "Ocupacion", "EDAD1"])
         .Factor.sum()
         .div(4)
         .round()
@@ -128,7 +130,8 @@ def _(xubilados_24):
 @app.cell
 def _(ocupados_24):
     ocup24_idade = (
-        ocupados_24.groupby(["Sector", "Ocupacion", "EDAD1"])
+        ocupados_24.query("EDAD1>50")
+        .groupby(["Sector", "Ocupacion", "EDAD1"])
         .Factor.sum()
         .div(4)
         .round()
@@ -280,21 +283,28 @@ def _(matrix, mo):
 @app.cell
 def _(anos_futuros, df, matrix, np, pd, proxeccion, t1):
     try:
-        resumo = (pd.concat(
-            [
-                proxeccion(matrix.index[int(safe_values_row(t1))], i)
-                for i in [i for i in np.sort(
-        df.query(
-            f'Sector=="{matrix.index[int(safe_values_row(t1))]}"&Ocupacion!="nan"&XUBIL==1'
-        ).Ocupacion.unique()) if i[:-1] == safe_values_column(t1)]  
-            ]
+        resumo = (
+            pd.concat(
+                [
+                    proxeccion(matrix.index[int(safe_values_row(t1))], i)
+                    for i in [
+                        i
+                        for i in np.sort(
+                            df.query(
+                                f'Sector=="{matrix.index[int(safe_values_row(t1))]}"&Ocupacion!="nan"'
+                            ).Ocupacion.unique()
+                        )
+                        if i[:-1] == safe_values_column(t1)
+                    ]
+                ]
+            )
+            .sum()
+            .reset_index()
+            .rename(columns={"index": "Ano", 0: "valor"})
         )
-        .sum()
-        .reset_index()
-        .rename(columns={"index": "Ano", 0: "valor"}))
 
     except ValueError:
-        resumo = pd.DataFrame(zip(anos_futuros, [0]*6), columns=['Ano','valor'])
+        resumo = pd.DataFrame(zip(anos_futuros, [0] * 6), columns=["Ano", "valor"])
     return (resumo,)
 
 
@@ -355,7 +365,7 @@ def _(alt, df, matrix, mo, np, pd, proxeccion, resumo, t1):
                                     i
                                     for i in np.sort(
                                         df.query(
-                                            f'Sector=="{matrix.index[int(safe_values_row(t1))]}"&Ocupacion!="nan"&XUBIL==1'
+                                            f'Sector=="{matrix.index[int(safe_values_row(t1))]}"&Ocupacion!="nan"'
                                         ).Ocupacion.unique()
                                     )
                                     if i[:-1] == safe_values_column(t1)
