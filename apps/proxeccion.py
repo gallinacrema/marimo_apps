@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.13.11"
+__generated_with = "0.14.9"
 app = marimo.App(width="medium")
 
 
@@ -27,25 +27,14 @@ def _(mo):
 
     filtrados = data_path.joinpath("filtrados_galicia_2d_19a24.feather")
     proxeccions_galicia = data_path.joinpath("proxeccions.feather")
-    cnae2009 =  data_path.joinpath("cnae2009.feather")
     cno2011 =  data_path.joinpath("cno2011.feather")
     cnae =  data_path.joinpath("cnae_2d_to_epa.feather")
-    referencia_pkl = data_path.joinpath("referencia.pkl")
-    matriz =  data_path.joinpath("MIOGAL21_Simetrica.feather")
     nomes_epa = data_path.joinpath("nomes_epa.feather")
-    return (
-        cnae,
-        cno2011,
-        filtrados,
-        nomes_epa,
-        proxeccions_galicia,
-        referencia_pkl,
-    )
+    return cnae, cno2011, filtrados, nomes_epa, proxeccions_galicia
 
 
 @app.cell
-def _(cnae, cno2011, nomes_epa, pd, referencia_pkl):
-    referencia = pd.read_pickle(referencia_pkl)
+def _(cnae, cno2011, nomes_epa, pd):
     cnae_2d_to_epa = pd.read_feather(cnae).to_dict()['Nuevo_codigo']
     cno = pd.read_feather(cno2011).astype('str').apply(lambda x:[i.lstrip('<b>').rstrip('</b>') for i in x])
     nomes = pd.read_feather(nomes_epa).set_index('Código').to_dict()
